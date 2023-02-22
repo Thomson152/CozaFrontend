@@ -14,20 +14,43 @@
     background-size: cover ;
     width:"100%";
     background-position: center center;
-    height: 950px;
+    height: 900px;
   }
   .img2{
     background: url('./images/slide-02.jpg');
     background-size: cover;
     width:"100%";
     background-position: center  center;
-    height: 950px;
+    height: 900px;
   }
   
   .img3{
     background: url('./images/slide-03.jpg');
     background-size: cover;
     width:"100%";
+    background-position: center;
+    height: 900px;
+  }
+  .banner1{
+    background: url('./images/banner-01.jpg');
+    background-size: cover;
+    width:"100%";
     background-position: center  center;
-    height: 950px;
+    height: 250px;
+  }
+
+  .banner2{
+    background: url('./images/banner-02.jpg');
+    background-size: cover;
+    width:"100%";
+    background-position: center  center;
+    height: 250px;
+  }
+
+  .banner3{
+    background: url('./images/banner-03.jpg');
+    background-size: cover;
+    width:"100%";
+    background-position: center  center;
+    height: 250px;
   }

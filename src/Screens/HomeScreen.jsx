@@ -50,7 +50,7 @@ const HomeScreen = () => {
             <div className=" img1">
               <Header />
               <div className="relative top-[15rem] md:top-[20rem] md:left-[5rem] left-4">
-                <Fade duration={1000} delay={600} direction={"left"} cascade>
+               
                   <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                     Woman Collection 2023
                   </h2>
@@ -64,7 +64,7 @@ const HomeScreen = () => {
                   >
                     SHOP NOW
                   </a>
-                </Fade>
+                
               </div>
             </div>
           </SwiperSlide>
@@ -73,7 +73,7 @@ const HomeScreen = () => {
             <div className=" img2">
               <Header />
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
-                <Fade duration={1000} delay={600} direction={"left"} cascade>
+               
                   <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                     Men New-Season
                   </h2>
@@ -87,7 +87,7 @@ const HomeScreen = () => {
                   >
                     SHOP NOW
                   </a>
-                </Fade>
+                
               </div>
             </div>
           </SwiperSlide>
@@ -95,7 +95,7 @@ const HomeScreen = () => {
             <div className=" img3">
               <Header />
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
-                <Fade duration={1000} delay={600} direction={"left"} cascade>
+               
                   <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                     Men Collection 2023
                   </h2>
@@ -109,11 +109,37 @@ const HomeScreen = () => {
                   >
                     SHOP NOW
                   </a>
-                </Fade>
+            
               </div>
             </div>
           </SwiperSlide>
         </Swiper>
+
+        {/* Card */}
+
+        <div className="mt-10 flex overflow-hidden  md:space-x-10  flex-col md:flex-row  mb-5 container  md:mx-auto">
+
+          <div className="border md:w-1/3 w-full my-3 border-gray-200 banner1 shadow  rounded">
+            <div className="relative left-5 ">
+              <h1 className="text-3xl font-bold">Women</h1>
+              <h2 className="text-lg py-2">Spring 2023</h2>
+            </div>
+          </div>
+
+          <div className="border md:w-1/3 w-full my-3  border-gray-200 banner2 shadow   rounded">
+            <div className="relative left-5">
+              <h1 className="text-3xl font-bold">Men</h1>
+              <h2 className="text-lg py-2">Spring 2023</h2>
+            </div>
+          </div>
+
+          <div className="border md:w-1/3 w-full my-3  border-gray-200 banner3 shadow rounded">
+            <div className="relative left-5">
+              <h1 className="text-3xl font-bold">Accessories</h1>
+              <h2 className="text-lg py-2">New Trend</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
