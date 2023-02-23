@@ -6,6 +6,7 @@ import img1 from "../images/slide-01.jpg";
 import img2 from "../images/slide-02.jpg";
 import img3 from "../images/slide-03.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
+import products from "../Prdouct";
 import {
   Navigation,
   Pagination,
@@ -21,6 +22,7 @@ import "swiper/css/navigation";
 // Import Swiper styles
 import "swiper/css";
 import { Fade, Zoom } from "react-awesome-reveal";
+import Product from "../components/Product";
 
 const HomeScreen = () => {
   return (
@@ -50,21 +52,19 @@ const HomeScreen = () => {
             <div className=" img1">
               <Header />
               <div className="relative top-[15rem] md:top-[20rem] md:left-[5rem] left-4">
-               
-                  <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
-                    Woman Collection 2023
-                  </h2>
+                <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
+                  Woman Collection 2023
+                </h2>
 
-                  <h1 className="md:text-7xl text-5xl py-7 font-serif font-medium">
-                    NEW SEASON
-                  </h1>
-                  <a
-                    href=""
-                    className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
-                  >
-                    SHOP NOW
-                  </a>
-                
+                <h1 className="md:text-7xl text-5xl py-7 font-serif font-medium">
+                  NEW SEASON
+                </h1>
+                <a
+                  href=""
+                  className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
+                >
+                  SHOP NOW
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -73,21 +73,19 @@ const HomeScreen = () => {
             <div className=" img2">
               <Header />
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
-               
-                  <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
-                    Men New-Season
-                  </h2>
+                <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
+                  Men New-Season
+                </h2>
 
-                  <h1 className="md:text-7xl text-4xl py-8 font-serif font-medium">
-                    JACKETS <span className="text-red-700">&</span> COATS
-                  </h1>
-                  <a
-                    href=""
-                    className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
-                  >
-                    SHOP NOW
-                  </a>
-                
+                <h1 className="md:text-7xl text-4xl py-8 font-serif font-medium">
+                  JACKETS <span className="text-red-700">&</span> COATS
+                </h1>
+                <a
+                  href=""
+                  className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
+                >
+                  SHOP NOW
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -95,21 +93,19 @@ const HomeScreen = () => {
             <div className=" img3">
               <Header />
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
-               
-                  <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
-                    Men Collection 2023
-                  </h2>
+                <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
+                  Men Collection 2023
+                </h2>
 
-                  <h1 className="md:text-7xl text-4xl py-7 font-serif font-medium">
-                    NEW ARRIVALS
-                  </h1>
-                  <a
-                    href=""
-                    className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
-                  >
-                    SHOP NOW
-                  </a>
-            
+                <h1 className="md:text-7xl text-4xl py-7 font-serif font-medium">
+                  NEW ARRIVALS
+                </h1>
+                <a
+                  href=""
+                  className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
+                >
+                  SHOP NOW
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -118,7 +114,6 @@ const HomeScreen = () => {
         {/* Card */}
 
         <div className="mt-10 flex overflow-hidden  md:space-x-10  flex-col md:flex-row  mb-5 container  md:mx-auto">
-
           <div className="border md:w-1/3 w-full my-3 border-gray-200 banner1 shadow  rounded">
             <div className="relative left-5 ">
               <h1 className="text-3xl font-bold">Women</h1>
@@ -138,6 +133,22 @@ const HomeScreen = () => {
               <h1 className="text-3xl font-bold">Accessories</h1>
               <h2 className="text-lg py-2">New Trend</h2>
             </div>
+          </div>
+        </div>
+
+        {/* //Product */}
+
+        <div className="container md:mx-auto mt-10">
+          <h1 className="text-4xl font-sans font-bold py-10">
+            PRODUCT OVERVIEW
+          </h1>
+
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            {products.map((product) => (
+              <div key={product._id}>
+                <Product product={product} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
