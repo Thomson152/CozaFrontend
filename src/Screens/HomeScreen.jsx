@@ -44,7 +44,7 @@ const HomeScreen = () => {
           <SwiperSlide className="">
             <div className=" img1">
               <Header />
-              <div className="relative top-[5rem] md:top-[20rem] md:left-[5rem] left-4">
+              <div className="relative top-[15rem] md:top-[20rem] md:left-[5rem] left-4">
                 <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                   Woman Collection 2023
                 </h2>
