@@ -27,6 +27,8 @@ function App() {
           <Route path="/product/:id" component={ProductScreen} exact />
         
       </main>
+
+      <Footer/>
     </Router>
   );
 }
