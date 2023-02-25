@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   return (
-    <div className="flex-col px-5 md:px-0 ">
-      <div className=" ">
-        <Link to={`/product/${product._id}`}>
-          <img src={product.image} alt="" className="scale-100  ease-in duration-500 " />
-        </Link>
+    <div className="flex-col px-5 h-fit group md:px-0 ">
+      <div className="relative   ">
+        <img src={product.image} alt="" />
 
-
-        <Link to={`/product/${product._id} `}>
+        <div
+          className="absolute h-full w-full -bottom-10  bg-black/20  flex flex-col  items-center justify-end group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500"
+        >
+          <Link to={`/product/${product._id} `} className="bg-white text-black hover:bg-black relative bottom-10 hover:text-white text-lg font-semibold py-2 px-4 rounded-full">Quick View</Link>
+        </div>
+      </div>
+      <Link to={`/product/${product._id} `}>
         <h1 className="text-lg font-semibold ">{product.name}</h1>
         <h3 className="text-lg text-gray-900">${product.price}</h3>
-        </Link>
-      </div>
-
-  
+      </Link>
     </div>
   );
 };
