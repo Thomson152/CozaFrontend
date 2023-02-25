@@ -27,6 +27,7 @@ import Product from "../components/Product";
 const HomeScreen = () => {
   return (
     <>
+      <Header />
       <div className="w-full my-[-1rem] ">
         <Swiper
           className="w-full "
@@ -34,16 +35,17 @@ const HomeScreen = () => {
           spaceBetween={2}
           effect={"fade"}
           speed={3000}
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 3000 }}
           slidesPerView={1}
           // pagination={{ clickable: false }}
           scrollbar={{ draggable: true }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-        >
+        > 
+         
           <SwiperSlide className="">
             <div className=" img1">
-              <Header />
+           
               <div className="relative top-[15rem] md:top-[20rem] md:left-[5rem] left-4">
                 <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                   Woman Collection 2023
@@ -64,7 +66,7 @@ const HomeScreen = () => {
 
           <SwiperSlide className="">
             <div className=" img2">
-              <Header />
+             
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
                 <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                   Men New-Season
@@ -84,7 +86,7 @@ const HomeScreen = () => {
           </SwiperSlide>
           <SwiperSlide className="">
             <div className=" img3">
-              <Header />
+             
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
                 <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                   Men Collection 2023

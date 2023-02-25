@@ -20,7 +20,7 @@ import OrderScreen from "./Screens/OrderScreen";
 function App() {
   return (
     <Router>
-     
+        
       <main className="py-3">
        
           <Route path="/" component={HomeScreen} exact />
