@@ -1,6 +1,6 @@
-/** @format */
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { Link, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -9,33 +9,34 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import logo from "../images/logo-01.png";
 
-const Header = () => {
-  const [open, setOpen] = useState(false);
-  const [scroll, setScroll] = useState(false);
 
-  useEffect(() => {
-    const handleScoll = () => {
-      if (window.scrollY > 90) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-    window.addEventListener("scroll", handleScoll);
-  }, []);
 
+const Navbar = () => {
+    const [open, setOpen] = useState(false);
+    const [scroll, setScroll] = useState(false);
+  
+    useEffect(() => {
+      const handleScoll = () => {
+        if (window.scrollY > 90) {
+          setScroll(true);
+        } else {
+          setScroll(false);
+        }
+      };
+      window.addEventListener("scroll", handleScoll);
+    }, []);
   return (
     <header>
       <nav
-        className={`flex fixed w-full z-10 top-[0rem] items-center  py-6 px-6 justify-between bg-white shadow ${
-          scroll ? "md:bg-white shadow-md" : "md:bg-transparent"
+        className={`flex fixed w-full z-10 top-[0rem] items-center  py-6 px-6 justify-between bg-white shadow  ${
+          scroll ? "md:bg-white " : "md:bg-white"
         }`}
       >
         <div className="flex items-center space-x-24">
           <img src={logo} alt="" className="w-28 h-5" />
 
           <ul className="hidden md:flex space-x-5 font-semibold text-neutral-500 text-lg items-center">
-            <li>
+          <li>
               <Link to = "/">Home</Link>
             </li>
             <li>
@@ -104,7 +105,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Navbar

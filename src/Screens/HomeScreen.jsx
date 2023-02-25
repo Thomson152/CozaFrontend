@@ -23,6 +23,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import { Fade, Zoom } from "react-awesome-reveal";
 import Product from "../components/Product";
+import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   return (
@@ -54,19 +55,18 @@ const HomeScreen = () => {
                 <h1 className="md:text-7xl text-5xl py-7 font-serif font-medium">
                   NEW SEASON
                 </h1>
-                <a
-                  href=""
+                <Link 
+                  to= "/shop"
                   className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
                 >
                   SHOP NOW
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
 
           <SwiperSlide className="">
             <div className=" img2">
-             
               <div className="relative left-4 top-[15rem] md:top-[20rem] md:left-[5rem]">
                 <h2 className="md:text-4xl text-2xl font-semibold font-sans ">
                   Men New-Season
@@ -172,7 +172,7 @@ const HomeScreen = () => {
 
         <div className="container md:mx-auto mt-10">
           <h1 className="md:text-4xl text-3xl text-center md:text-left font-sans font-bold  py-10">
-            PRODUCT OVERVIEW
+            TRENDING NOW
           </h1>
 
           <div className="grid gap-8 mb-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
