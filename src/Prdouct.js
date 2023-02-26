@@ -1,6 +1,6 @@
 const products = [
     {
-        
+        _id: '1',
       name: 'Esprit Ruffle Shirt',
       image: '/asserts/product-01.jpg',
       description:
@@ -9,11 +9,12 @@ const products = [
       category: 'Electronics',
       price: 89.99,
       countInStock: 3,
-
-      rating: 0,
-      numReviews: 0,
+      
+      rating: 4,
+      numReviews: 3,
     },
     {
+      _id: '2',
       name: 'Herschel supply',
       image: '/asserts/product-02.jpg',
       description:
@@ -22,11 +23,12 @@ const products = [
       category: 'Electronics',
       price: 599.99,
       countInStock: 10,
-      rating: 0,
+      rating: 4,
       numReviews: 0,
     },
    
     {
+      _id: '3',
       name: 'Only Check Trouser',
       image: '/asserts/product-03.jpg',
       description:
@@ -35,10 +37,11 @@ const products = [
       category: 'Electronics',
       price: 399.99,
       countInStock: 10,
-      rating: 0,
-      numReviews: 0,
+      rating: 3,
+      numReviews: 5,
     },
     {
+      _id: '4',
       name: 'Classic Trench Coat',
       image: '/asserts/product-04.jpg',
       description:
@@ -51,6 +54,7 @@ const products = [
       numReviews: 0,
     },
     {
+      _id: '5',
       name: 'Front Pocket Jumper',
       image: '/asserts/product-05.jpg',
       description:
@@ -59,7 +63,7 @@ const products = [
       category: 'Electronics',
       price: 29.99,
       countInStock: 0,
-      rating: 0,
+      rating: 2,
       numReviews: 0,
     },
 
@@ -67,6 +71,7 @@ const products = [
   
 
       {
+        _id: '6',
         name: 'Vintage Inspired Classic',
         image: '/asserts/product-06.jpg',
         description:
@@ -80,6 +85,7 @@ const products = [
       },
 
       {
+        _id:'7',
         name: 'Shirt in Stretch Cotton',
         image: '/asserts/product-07.jpg',
         description:
@@ -88,11 +94,12 @@ const products = [
         category: 'Electronics',
         price: 29.99,
         countInStock: 0,
-        rating: 0,
+        rating: 1,
         numReviews: 0,
       },
 
       {
+        _id:'8',
         name: 'Pieces Metallic Printed',
         image: '/asserts/product-08.jpg',
         description:
@@ -101,11 +108,12 @@ const products = [
         category: 'Electronics',
         price: 29.99,
         countInStock: 0,
-        rating: 0,
+        rating: 5,
         numReviews: 0,
       },
 
       {
+        _id:'9',
         name: 'Converse All Star Hi Plimsolls',
         image: '/asserts/product-09.jpg',
         description:
@@ -114,11 +122,12 @@ const products = [
         category: 'Electronics',
         price: 29.99,
         countInStock: 0,
-        rating: 0,
+        rating: 3,
         numReviews: 0,
       },
 
       {
+        _id: '10',
         name: 'Femme T-Shirt In Stripe',
         image: '/asserts/product-10.jpg',
         description:
@@ -127,11 +136,12 @@ const products = [
         category: 'Electronics',
         price: 29.99,
         countInStock: 0,
-        rating: 0,
+        rating: 3,
         numReviews: 0,
       },
 
       {
+        _id: '11',
         name: 'Herschel supply',
         image: '/asserts/product-11.jpg',
         description:
@@ -145,6 +155,7 @@ const products = [
       },
 
       {
+        _id: '12',
         name: 'T-Shirt with Sleeve',
         image: '/asserts/product-12.jpg',
         description:
@@ -160,6 +171,7 @@ const products = [
   
 
       {
+        _id:'13',
         name: 'Pretty Little Thing',
         image: '/asserts/product-13.jpg',
         description:
@@ -173,6 +185,7 @@ const products = [
       },
 
       {
+        _id:'14',
         name: 'Mini Silver Mesh Watch',
         image: '/asserts/product-14.jpg',
         description:
@@ -186,6 +199,7 @@ const products = [
       },
 
       {
+        _id: '15',
         name: 'Square Neck Back',
         image: '/asserts/product-15.jpg',
         description:
@@ -199,6 +213,7 @@ const products = [
       },
 
       {
+        _id: '16',
         name: 'T-Shirt with Sleeve',
         image: '/asserts/product-16.jpg',
         description:

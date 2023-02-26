@@ -9,9 +9,9 @@ const Product = ({ product }) => {
         <img src={product.image} alt="" />
 
         <div
-          className="absolute h-full w-full -bottom-10  bg-black/20  flex flex-col  items-center justify-end group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-500"
+          className="absolute h-full w-full -bottom-0  bg-black/20  flex flex-col  items-center justify-end group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all ease-out duration-500"
         >
-          <Link to={`/product/${product._id} `} className="bg-white text-black hover:bg-black relative bottom-10 hover:text-white text-lg font-semibold py-2 px-4 rounded-full">Quick View</Link>
+          <Link to={`/product/${product._id} `} className="bg-white text-black hover:bg-black relative bottom-10 hover:text-white text-lg font-semibold py-2 px-6 rounded-full">Quick View</Link>
         </div>
       </div>
       <Link to={`/product/${product._id} `}>
