@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Ratings from "../components/Ratings";
 import products from "../Prdouct";
+import { useDispatch, useSelector } from 'react-redux'
 
 const ProductScreen = ({ match }) => {
   const [qty, setQty] = useState(1);
