@@ -29,7 +29,7 @@ export const listProducts =() => async (dispatch) => {
       dispatch({ type: PRODUCT_LIST_REQUEST });
 
       const { data } = await axios.get(
-        `/api/products`
+        `https://cozabackend-api.onrender.com/api/products`
       );
 
       dispatch({
@@ -52,7 +52,7 @@ export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(`https://cozabackend-api.onrender.com/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,

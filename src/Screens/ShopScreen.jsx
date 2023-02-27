@@ -8,6 +8,7 @@ import products from "../Prdouct";
 import Loader from "../components/Loader";
 import { listProducts } from "../actions/productActions";
 import { useEffect } from "react";
+import Footer from "../components/Footer";
 const ShopScreen = () => {
   const dispatch = useDispatch();
 
@@ -20,14 +21,14 @@ const ShopScreen = () => {
 
   return (
     <>
+      <Navbar />
+
+      <div className="container md:mx-auto mt-[10rem]">
       {loading ? (
-        <Loader />
-      ) : error ? (
-        error
-      ) : (
-        <div className="">
-          <Navbar />
-          <div className="container md:mx-auto mt-[10rem]">
+           <Loader/>
+          ) : error ? (
+            <h1>{error}</h1>
+          ) : (
             <div className="grid gap-8 mb-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               {products.map((product) => (
                 <div key={product._id}>
@@ -35,9 +36,9 @@ const ShopScreen = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      )}
+          )}
+      </div>
+      <Footer/>
     </>
   );
 };
