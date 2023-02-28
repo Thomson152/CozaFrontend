@@ -47,8 +47,9 @@ const HomeScreen = () => {
           className="w-full "
           modules={[Navigation, Scrollbar, A11y, Autoplay, EffectFade]}
           spaceBetween={2}
-          effect={"fade"}
-          speed={3000}
+          effect="fade"
+          fadeEffect={{crossFade: true}}
+          speed={2000}
           autoplay={{ delay: 3000 }}
           slidesPerView={1}
           // pagination={{ clickable: false }}
@@ -86,12 +87,12 @@ const HomeScreen = () => {
                 <h1 className="md:text-7xl text-4xl py-8 font-serif font-medium">
                   JACKETS <span className="text-red-700">&</span> COATS
                 </h1>
-                <a
-                  href=""
+                <Link
+                 to="/shop"
                   className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
                 >
                   SHOP NOW
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -105,12 +106,12 @@ const HomeScreen = () => {
                 <h1 className="md:text-7xl text-4xl py-7 font-serif font-medium">
                   NEW ARRIVALS
                 </h1>
-                <a
-                  href=""
+                <Link
+                  to="/shop"
                   className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
                 >
                   SHOP NOW
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -191,7 +192,7 @@ const HomeScreen = () => {
             </div>
           )}
         </div>
-        <Footer/>
+     
       </div>
     </>
   );

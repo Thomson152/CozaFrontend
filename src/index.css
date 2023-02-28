@@ -54,3 +54,27 @@
     background-position: center  center;
     height: 250px;
   }
+
+  .aboutBanner{
+    background: url('./images/bg-01.jpg');
+    background-size: cover;
+    width:"100%";
+    background-position: center  center;
+    height: 250px;
+    
+  }
+  .pa:hover{
+
+    transform: scale(1.1);
+  }
+
+  .about1{
+    background: url('./images/about-01.jpg');
+    background-size: cover;
+    width:"50%";
+    background-position: center center;
+    height: 100%;
+    transition: all 1s;
+  }
+
+
