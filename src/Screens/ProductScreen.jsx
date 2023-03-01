@@ -8,6 +8,7 @@ import Ratings from "../components/Ratings";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
+import Footer from "../components/Footer";
 
 const ProductScreen = ({ match }) => {
   const [qty, setQty] = useState(1);
@@ -83,6 +84,7 @@ const ProductScreen = ({ match }) => {
           </div>
         </div>
       )}
+         <Footer/>
     </div>
   );
 };

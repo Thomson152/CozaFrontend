@@ -33,7 +33,7 @@ function App() {
           <Route path='/cart/:id?' component={CartScreen}/>
         
       </main>
-      <Footer/>
+   
     </Router>
   );
 }

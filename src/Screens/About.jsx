@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import about1 from "../images/about-01.jpg";
 import about2 from "../images/about-02.jpg";
@@ -74,6 +75,7 @@ const About = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

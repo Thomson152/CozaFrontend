@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
@@ -74,6 +75,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
