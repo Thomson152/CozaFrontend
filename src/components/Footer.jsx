@@ -47,7 +47,7 @@ const Footer = () => {
 
          {/* <input type="text" placeholder="email@example.com"  className="w-"/> */}
 
-         <a href="" className="text-lg  rounded-full bg-ligthBlue py-2 md:px-6 hover:bg-white hover:text-blue-500">SUBSCRIBE</a>
+      
         </div>
 
         

@@ -68,7 +68,7 @@ const Navbar = () => {
 
         <nav>
           {/* Mobile */}
-          <ul className=  {`md:hidden absolute top-[4rem] right-[0rem] w-[100%]  bg-blue-500 px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${open ? "left-0 duration-300" : "left-[-100%] duration-300"}`}  >
+          <ul className=  {`md:hidden absolute top-[4rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${open ? "left-0 duration-300" : "left-[-100%] duration-300"}`}  >
           <li>
               <Link to = "/">Home</Link>
             </li>
