@@ -17,8 +17,9 @@ const Contact = () => {
         </h1>
       </div>
 
-      <div className="border-2 my-10 md:flex-row flex-col space-y-10 container mx-auto flex justify-between">
-        <div className="md:w-1/2 border space-y-5 p-5 md:p-16 flex flex-col  border-r-2">
+      <div className="  my-10 border-2 md:flex-row flex-col space-y-20 container mx-auto flex justify-between">
+        
+        <div className="md:w-1/2  space-y-7 p-5 md:p-16 flex flex-col  md:border-r-2">
           <h4 className="text-3xl text-center ">Send Us A Message</h4>
 
           <input
