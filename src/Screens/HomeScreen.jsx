@@ -194,7 +194,7 @@ const HomeScreen = () => {
         </div>
      
       </div>
-      <Footer/>
+      
     </>
   );
 };

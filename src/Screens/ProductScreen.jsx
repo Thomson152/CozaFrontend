@@ -84,7 +84,7 @@ const ProductScreen = ({ match }) => {
           </div>
         </div>
       )}
-         <Footer/>
+        
     </div>
   );
 };
