@@ -11,7 +11,7 @@ const About = () => {
       <Navbar />
 
       <div className="aboutBanner mt-10 justify-center items-center flex">
-        <h1 className="text-7xl font-bold text-white">About</h1>
+        <h1 className="md:text-7xl text-4xl font-sans font-bold text-white">About</h1>
       </div>
 
       <div className="flex container mx-auto my-14 md:flex-row flex-col px-3 justify-between ">
@@ -61,10 +61,10 @@ const About = () => {
       <div className="flex items-center container mx-auto my-14 md:flex-row flex-col-reverse px-3 justify-between  ">
         <div className="md:w-[30%] mt-16 md:h-[50%] w-[100%] p-6 md:p-2 border-4 overflow-hidden ">
           <img
-            src={about2}
+            src={about2}                                           
             alt=""
             className="w-[100%] scale-100 hover:scale-125 ease-in duration-500"
-          />
+          />                                                                                                                  
         </div>
 
         <div className="md:w-[60%] w-[100%]">
