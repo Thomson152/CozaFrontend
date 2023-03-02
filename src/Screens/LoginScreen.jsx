@@ -10,7 +10,7 @@ const LoginScreen = () => {
       <Navbar />
 
       <div className="flex justify-center conatiner items-center mt-32 mb-16">
-        <div className="bg-white md:w-[40%] w-[90%] h-[70%]  space-y-8 flex-col border-3 shadow flex py-[5rem] px-1 md:px-[3rem] ">
+        <div className="bg-white md:w-[40%] w-[90%] h-[70%]  space-y-8 flex-col border-3 shadow flex py-[2rem] px-3 md:px-[3rem] ">
           <h1 className="text-2xl pt-2 font-sans font-semibold">SIGN IN</h1>
           <input
             type="text"
