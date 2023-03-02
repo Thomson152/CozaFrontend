@@ -14,12 +14,12 @@ const LoginScreen = () => {
           <h1 className="text-2xl pt-2 font-sans font-semibold">SIGN IN</h1>
           <input
             type="text"
-            className="border  p-5 text-lg outline-none"
+            className="border  p-3 text-lg outline-none"
             placeholder="Email"
           />
           <input
             type="password"
-            className="border  p-5 text-lg outline-none"
+            className="border  p-3 text-lg outline-none"
             placeholder="Password"
           />
 
