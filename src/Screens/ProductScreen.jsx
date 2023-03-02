@@ -64,7 +64,8 @@ const ProductScreen = ({ match }) => {
               <select
                 as="select"
                 value={qty}
-                className="outline-0 border md:w-20 p-4 bg-gray-100 w-20 ml-3"
+                className="outline-0 
+                border md:w-18 p-4 bg-gray-100 w-20 "
                 onChange={(e) => setQty(e.target.value)}
               >
                 {[...Array(product.countInStock).keys()].map((x) => (
@@ -73,8 +74,10 @@ const ProductScreen = ({ match }) => {
                   </option>
                 ))}
               </select>
+
               <Link
-                to="/cart"
+                style={{ pointerEvents: product.countInStock === 0 }}
+                type="button"
                 className="bg-black py-2 mx-2 text-center hover:bg-blue-500 hover:text-white m px-6 text-lg rounded-full text-white"
               >
                 {" "}
@@ -84,7 +87,6 @@ const ProductScreen = ({ match }) => {
           </div>
         </div>
       )}
-        
     </div>
   );
 };

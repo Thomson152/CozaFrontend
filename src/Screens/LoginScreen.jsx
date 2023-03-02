@@ -14,16 +14,26 @@ const LoginScreen = () => {
           <h1 className="text-2xl pt-2 font-sans font-semibold">SIGN IN</h1>
           <input
             type="text"
-            className="border-b-2  p-5 text-lg outline-none"
+            className="border  p-5 text-lg outline-none"
             placeholder="Email"
           />
           <input
             type="password"
-            className="border-b-2  p-5 text-lg outline-none"
+            className="border  p-5 text-lg outline-none"
             placeholder="Password"
           />
 
-          <Link  to ='/' className="hover:bg-slate-900 text-white px-14 text-center py-3 rounded-full text-xl bg-blue-600 " >Log In</Link>
+          <Link
+            to="/"
+            className="hover:bg-slate-900 text-white px-14 text-center py-3 rounded-full text-xl bg-blue-600 "
+          >
+            Log In
+          </Link>
+
+          <div className="text-center text-lg">
+            New Customer?
+            <Link>Register</Link>
+          </div>
         </div>
       </div>
     </div>
