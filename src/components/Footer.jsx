@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black ">
+    <footer className="bg-slate-800 ">
       <div className="container space-y-10 md:space-y-0 px-6 justify-between flex-col md:flex-row py-20 text-white flex mx-auto">
         <div className=" space-y-4">
           <h2 className="font-semibold text-xl">CATEGORIES</h2>

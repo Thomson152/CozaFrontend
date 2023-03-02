@@ -1,3 +1,4 @@
+/** @format */
 
 import React, { useEffect, useState } from "react";
 
@@ -9,22 +10,20 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import logo from "../images/logo-01.png";
 
-
-
 const Navbar = () => {
-    const [open, setOpen] = useState(false);
-    const [scroll, setScroll] = useState(false);
-  
-    useEffect(() => {
-      const handleScoll = () => {
-        if (window.scrollY > 90) {
-          setScroll(true);
-        } else {
-          setScroll(false);
-        }
-      };
-      window.addEventListener("scroll", handleScoll);
-    }, []);
+  const [open, setOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScoll = () => {
+      if (window.scrollY > 90) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+    window.addEventListener("scroll", handleScoll);
+  }, []);
   return (
     <header>
       <nav
@@ -36,15 +35,15 @@ const Navbar = () => {
           <img src={logo} alt="" className="w-28 h-5" />
 
           <ul className="hidden md:flex space-x-5 font-semibold text-neutral-500 text-lg items-center">
-          <li>
-              <Link to = "/">Home</Link>
+            <li>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/shop">Shop</Link>
             </li>
-            
+
             <li>
-              <Link to ='/about'>About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/contact">Contacts</Link>
@@ -52,30 +51,31 @@ const Navbar = () => {
           </ul>
         </div>
 
-
         <div
-        onClick={() => setOpen(!open)}
-        className="text-3xl absolute right-4 top-6 cursor-pointer md:hidden"
-      >
-        {open ? (
-          <HiX className={scroll ? "text-black " : "" } />
-        ) : (
-          <HiMenuAlt3 className={scroll ? "text-black" : ""} />
-        )}
-      </div>
-
-        
+          onClick={() => setOpen(!open)}
+          className="text-3xl absolute right-4 top-6 cursor-pointer md:hidden"
+        >
+          {open ? (
+            <HiX className={scroll ? "text-black " : ""} />
+          ) : (
+            <HiMenuAlt3 className={scroll ? "text-black" : ""} />
+          )}
+        </div>
 
         <nav>
           {/* Mobile */}
-          <ul className=  {`md:hidden absolute top-[4rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${open ? "left-0 duration-300" : "left-[-100%] duration-300"}`}  >
-          <li>
-              <Link to = "/">Home</Link>
+          <ul
+            className={`md:hidden absolute top-[4rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${
+              open ? "left-0 duration-300" : "left-[-100%] duration-300"
+            }`}
+          >
+            <li>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/shop">Shop</Link>
             </li>
-           
+
             <li>
               <Link to="/about">About</Link>
             </li>
@@ -91,17 +91,18 @@ const Navbar = () => {
           </li>
           <li>
             {" "}
-            <a
+            <Link
+              to="/login"
               href=""
               className="text-xl py-2 rounded-full px-7  hover:bg-blue-500 text-center text-white bg-black"
             >
               Login
-            </a>{" "}
+            </Link>{" "}
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
