@@ -94,7 +94,8 @@ const Header = () => {
             <Link to ="/login"
             
               className="text-xl py-2 rounded-full px-7 
-               hover:bg-blue-500 text-center text-white bg-black"
+               hover:bg-blue-500 text-center text-white
+                bg-slate-900"
             >
               Login
             </Link>
