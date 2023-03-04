@@ -12,7 +12,7 @@ const CartScreen = () => {
       <div className="mt-[10rem] mb-24  container md:mx-auto">
         <div class="relative overflow-x-auto b">
           <table class="md:w-[60%] w-[100%] text-sm border-2 text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-lg text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <thead class="text-lg text-gray-700 uppercase bg-gray-50 dark:bg-slate-100 dark:text-gray-400">
               <tr>
                 <th scope="col" class="px-6 py-3">
                   Product name
@@ -35,7 +35,7 @@ const CartScreen = () => {
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   <div className="flex items-center">
-                    <img src={img1} className="md:w-[30%] w-[50%]" alt="" />
+                    <img src={img1} className="md:w-[30%] h-[50%] w-[50%]" alt="" />
                     <h6 className="ml-4 text-lg">Apple MacBook Pro 17"</h6>
                   </div>
                 </th>
@@ -61,7 +61,7 @@ const CartScreen = () => {
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   <div className="flex items-center">
-                    <img src={img1} className="md:w-[30%] w-[50%] " alt="" />
+                    <img src={img1} className="md:w-[30%] h-[50%] w-[50%] " alt="" />
                     <h6 className="ml-4 text-lg">Apple MacBook Pro 17"</h6>
                   </div>
                 </th>
