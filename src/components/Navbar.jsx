@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`flex fixed w-full z-10 top-[0rem] items-center  py-6 px-6 justify-between bg-white   ${
+        className={`flex fixed w-full z-10 top-[0rem] items-center  py-4 px-6 justify-between bg-white   ${
           scroll ? "md:bg-white shadow" : "md:bg-white shadow"
         }`}
       >
@@ -66,7 +66,7 @@ const Navbar = () => {
         <nav>
           {/* Mobile */}
           <ul
-            className={`md:hidden absolute top-[6.3rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${
+            className={`md:hidden absolute top-[5rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${
               open ? "left-0 duration-300" : "left-[-100%] duration-300"
             }`}
           >
@@ -86,9 +86,12 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <ul className="flex space-x-5 relative items-center right-7">
+        <ul className="flex space-x-7 relative items-center right-7">
           <li>
-            <BsCart4 className="text-3xl" />
+            <Link to='/cart'>
+            <BsCart4  className="text-3xl" />
+            </Link>
+           
           </li>
           <li>
             <Link to="/login" >

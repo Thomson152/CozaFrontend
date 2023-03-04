@@ -19,7 +19,7 @@ const LoginScreen = () => {
           <img src={logo} alt="" />
         </div>
         
-          <h1 className="text-2xl pt-2 font-sans font-semibold">SIGN IN</h1>
+          <h1 className="md:text-2xl text-xl pt-2 font-sans font-semibold">SIGN IN</h1>
           <input
             type="text"
             className="border  p-3 text-lg outline-none"

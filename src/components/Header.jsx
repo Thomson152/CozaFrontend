@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header>
       <nav
-        className={`flex fixed w-full z-10 top-[0rem] items-center  py-6 pt-5 px-6 justify-between bg-white  ${
+        className={`flex fixed w-full z-10 top-[0rem] items-center  py-4 pt-5 px-6 justify-between bg-white  ${
           scroll ? "md:bg-white shadow" : "md:bg-transparent"
         }`}
       >
@@ -86,12 +86,14 @@ const Header = () => {
           </ul>
         </nav>
 
-        <ul className="flex space-x-5 items-center relative right-7">
+        <ul className="flex space-x-7 items-center relative right-7">
           <li>
-            <BsCart4 className="text-2xl" />
+            <Link to="/cart">
+              <BsCart4 className="text-3xl" />
+            </Link>
           </li>
           <li>
-            <Link to="/login" >
+            <Link to="/login">
               <CgProfile className="text-3xl" />
               <h6>Sign In</h6>
             </Link>{" "}
