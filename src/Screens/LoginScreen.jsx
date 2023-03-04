@@ -3,13 +3,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import usePasswordToggle from "../hooks/usePasswordToggle";
 
 const LoginScreen = () => {
+  const [PasswordInputType, ToggleIcon] = usePasswordToggle();
   return (
     <div>
       <Navbar />
 
-      <div className="flex justify-center conatiner items-center mt-32 mb-16">
+      <div className="flex justify-center relative conatiner items-center mt-32 mb-16">
         <div className="bg-white md:w-[40%] w-[90%] h-[70%]  space-y-8 flex-col border-3 shadow flex py-[2rem] px-3 md:px-[3rem] ">
           <h1 className="text-2xl pt-2 font-sans font-semibold">SIGN IN</h1>
           <input
@@ -18,10 +20,13 @@ const LoginScreen = () => {
             placeholder="Email"
           />
           <input
-            type="password"
+            type={PasswordInputType}
             className="border  p-3 text-lg outline-none"
             placeholder="Password"
           />
+          <span className="absolute top-[11rem]  right-[4rem] md:right-[28rem]">
+            {ToggleIcon}
+          </span>
 
           <Link
             to="/"
