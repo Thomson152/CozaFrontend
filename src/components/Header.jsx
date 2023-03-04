@@ -8,6 +8,7 @@ import { BsCart4 } from "react-icons/bs";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import logo from "../images/logo-01.png";
+import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,7 @@ const Header = () => {
   return (
     <header>
       <nav
-        className={`flex fixed w-full z-10 top-[0rem] items-center  py-6 px-6 justify-between bg-white  ${
+        className={`flex fixed w-full z-10 top-[0rem] items-center  py-6 pt-5 px-6 justify-between bg-white  ${
           scroll ? "md:bg-white shadow" : "md:bg-transparent"
         }`}
       >
@@ -53,7 +54,7 @@ const Header = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-4 top-6 cursor-pointer md:hidden"
+          className="text-3xl absolute right-4 top-8 cursor-pointer md:hidden"
         >
           {open ? (
             <HiX className={scroll ? "text-black " : ""} />
@@ -65,7 +66,7 @@ const Header = () => {
         <nav>
           {/* Mobile */}
           <ul
-            className={`md:hidden absolute top-[4rem] right-[0rem] w-[100%] text-xl bg-blue-500 px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${
+            className={`md:hidden absolute top-[4.5rem] right-[0rem] w-[100%] text-xl bg-blue-500 px-4 text-white  py-3 font-semibold space-y-5  transition-all ease-in  ${
               open ? "left-0 duration-300" : "left-[-100%] duration-300"
             }`}
           >
@@ -85,20 +86,15 @@ const Header = () => {
           </ul>
         </nav>
 
-        <ul className="flex space-x-5 relative right-7">
+        <ul className="flex space-x-5 items-center relative right-7">
           <li>
             <BsCart4 className="text-2xl" />
           </li>
           <li>
-            {" "}
-            <Link to ="/login"
-            
-              className="text-xl py-2 rounded-full px-7 
-               hover:bg-blue-500 text-center text-white
-                bg-slate-900"
-            >
-              Login
-            </Link>
+            <Link to="/login" >
+              <CgProfile className="text-3xl" />
+              <h6>Sign In</h6>
+            </Link>{" "}
           </li>
         </ul>
       </nav>
