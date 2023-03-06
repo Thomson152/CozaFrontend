@@ -10,7 +10,7 @@ import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = ({ match, history }) => {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
@@ -19,6 +19,10 @@ const ProductScreen = ({ match }) => {
   useEffect(() => {
     dispatch(listProductDetails(match.params.id)); //Getting id from the url
   }, [dispatch, match]);
+
+    const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?qty=${qty}`);
+  };
 
   return (
     <div>
@@ -77,8 +81,9 @@ const ProductScreen = ({ match }) => {
 
               <Link
                 style={{ pointerEvents: product.countInStock === 0 }}
+                onClick={addToCartHandler}
                 type="button"
-                className="bg-black py-2 mx-2 text-center hover:bg-blue-500 hover:text-white m px-6 text-lg rounded-full text-white"
+                className="bg-black py-2 mx-2 text-center hover:bg-blue-500 hover:text-white m px-6 text-lg rounded text-white"
               >
                 {" "}
                 Add to Cart

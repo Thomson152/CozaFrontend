@@ -29,7 +29,7 @@ function App() {
           <Route path="/shop" component={ShopScreen}/>
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
-          <Route path="/cart" component={CartScreen}/>
+          <Route path="/cart/:id?" component={CartScreen}/>
           <Route path="/product/:id" component={ProductScreen}/>
           <Route path="/login" component={LoginScreen}/>
           
