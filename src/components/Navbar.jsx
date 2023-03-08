@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`flex fixed w-full z-10 top-[0rem] items-center  py-4 px-6 justify-between bg-white   ${
+        className={`flex fixed w-full z-10 top-[0rem] items-center  py-3  px-6 justify-between bg-white   ${
           scroll ? "md:bg-white shadow" : "md:bg-white shadow"
         }`}
       >
@@ -54,7 +54,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-4 top-9 cursor-pointer md:hidden"
+          className="text-3xl absolute right-4 top-7 cursor-pointer md:hidden"
         >
           {open ? (
             <HiX className={scroll ? "text-black text-3xl" : ""} />
