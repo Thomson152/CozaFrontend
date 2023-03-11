@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Ratings from "../components/Ratings";
-
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
@@ -18,6 +19,8 @@ const ProductScreen = ({ match, history }) => {
 
   useEffect(() => {
     dispatch(listProductDetails(match.params.id)); //Getting id from the url
+   
+
   }, [dispatch, match]);
 
     const addToCartHandler = () => {

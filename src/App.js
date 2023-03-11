@@ -3,6 +3,8 @@
 
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HomeScreen from "./Screens/HomeScreen";
@@ -22,21 +24,27 @@ import Contact from "./Screens/Contact";
 
 function App() {
   return (
+  <div>
     <Router>
         
-      <main className="py-3">
-          <Route path="/" component={HomeScreen} exact />
-          <Route path="/shop" component={ShopScreen}/>
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/cart/:id?" component={CartScreen}/>
-          <Route path="/product/:id" component={ProductScreen}/>
-          <Route path="/login" component={LoginScreen}/>
+        <main className="py-3">
+            <Route path="/" component={HomeScreen} exact />
+            <Route path="/shop" component={ShopScreen}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
+            <Route path="/cart/:id?" component={CartScreen}/>
+            <Route path="/product/:id" component={ProductScreen}/>
+            <Route path="/login" component={LoginScreen}/>
+            
           
-        
-      </main>
-   <Footer/>
-    </Router>
+        </main>
+     <Footer/>
+      </Router>
+         <ToastContainer />
+
+
+  </div>
+
   );
 }
 

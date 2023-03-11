@@ -39,7 +39,7 @@ const CartScreen = ({ match, location, history }) => {
         <>
           <div className="mt-[7rem] mb-24 md:space-x-5 flex flex-col px-6 md:px-0 md:flex-row container  md:mx-auto">
             <div className="md:w-[70%] w-[100%]">
-              <h1 className="text-2xl font-bold mb-7">SHOPPING CART</h1>
+              <h1 className="md:text-2xl text-xl font-bold mb-7">SHOPPING CART</h1>
               <div className="">
                 <div class="relative overflow-x-auto">
                   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

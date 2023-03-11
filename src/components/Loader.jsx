@@ -1,11 +1,11 @@
 /** @format */
 
 import React from "react";
-import { Spinner } from "react-bootstrap";
+
 
 const Loader = () => {
   return (
-    <div className="text-center my-72">
+    <div className="text-center my-60">
       <div role="status">
         <svg
           aria-hidden="true"
