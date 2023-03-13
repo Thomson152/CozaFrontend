@@ -47,7 +47,7 @@ const ProductScreen = ({ match, history }) => {
             <img src={product.image} className="md:w-[80%]  md:h-[90%]" />
           </div>
 
-          <div className="md:w-1/2 md:py-16  py-8">
+          <div className="md:w-1/2 md:py-16  py-8 ">
             <h1 className=" md:text-5xl text-2xl font-bold">{product.name}</h1>
             <h4 className="text-2xl py-3 font-semibold">${product.price}</h4>
 

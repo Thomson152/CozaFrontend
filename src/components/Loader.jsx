@@ -5,7 +5,7 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <div className="text-center my-20">
+    <div className="text-center my-20 md:my-64">
       <div role="status">
         <svg
           aria-hidden="true"

@@ -126,7 +126,7 @@ const Navbar = () => {
                     dropdownOpen
                       ? `top-full opacity-100 visible`
                       : `top-[110%] invisible opacity-0`
-                  } absolute right-0 z-10 w-40 mt-4  transition-all bg-white border border-gray-100 rounded-md shadow-lg`}
+                  } absolute right-0 z-10 w-[11rem] mt-4  transition-all bg-white border border-gray-100 rounded-md shadow-lg`}
                 >
                   <div className="p-2">
                     <Link
