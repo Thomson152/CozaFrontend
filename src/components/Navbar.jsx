@@ -107,7 +107,7 @@ const Navbar = () => {
             <div className="inline-flex  rounded-md">
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                className="px-4 py-2  text-lg font-medium text-gray-600   rounded-l-md"
+                className="px-4 py-2  text-lg font-bold text-gray-600   rounded-l-md"
               >
                 {userInfo.name}
               </Link>
@@ -126,7 +126,7 @@ const Navbar = () => {
                     dropdownOpen
                       ? `top-full opacity-100 visible`
                       : `top-[110%] invisible opacity-0`
-                  } absolute right-0 z-10 w-[11rem] mt-4  transition-all bg-white border border-gray-100 rounded-md shadow-lg`}
+                  } absolute right-0 z-10 w-[13rem] mt-6  transition-all bg-white border border-gray-100 rounded shadow`}
                 >
                   <div className="p-2">
                     <Link

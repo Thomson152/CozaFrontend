@@ -44,7 +44,7 @@ const ProductScreen = ({ match, history }) => {
       ) : (
         <div className=" container px-8 flex items-center flex-col md:flex-row my-40  mx-auto">
           <div className="md:w-1/2  ">
-            <img src={product.image} className="md:w-[80%]  md:h-[90%]" />
+            <img src={product.image} className="md:w-[80%] shadow border  md:h-[90%]" />
           </div>
 
           <div className="md:w-1/2 md:py-16  py-8 ">

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   return (
-    <div className="flex-col px-5 h-fit group border shadow md:px-0 ">
-      <div className="relative   ">
+    <div className="flex-col px-5  group  md:px-0 ">
+      <div className="relative  border shadow ">
         <img src={product.image} alt="" className="scale-100 hover:scale-125 ease-in duration-500" />
 
         <div

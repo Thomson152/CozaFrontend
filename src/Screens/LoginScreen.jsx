@@ -56,7 +56,7 @@ const LoginScreen = ({ history, location }) => {
               <img src={logo} alt="" />
             </div>
 
-            <h1 className="md:text-2xl text-xl pt-2 font-semibold">SIGN IN</h1>
+            <h1 className="md:text-2xl text-xl pt-2 font-bold">SIGN IN</h1>
             <input
               type="text"
               className="border  p-3 text-lg outline-none"
