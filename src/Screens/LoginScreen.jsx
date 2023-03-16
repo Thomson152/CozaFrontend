@@ -50,7 +50,7 @@ const LoginScreen = ({ history, location }) => {
           <form
             action=""
             onSubmit={submitHandler}
-            className="flex flex-col space-y-5"
+            className="flex flex-col space-y-4 md:space-y-5"
           >
             <div className=" flex justify-center mb-4">
               <img src={logo} alt="" />
@@ -66,12 +66,12 @@ const LoginScreen = ({ history, location }) => {
             />
             <input
               type={PasswordInputType}
-              className="border  p-3 text-lg outline-none"
+              className="border  p-3  text-lg outline-none"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="absolute top-[13.5rem]  right-[3rem] md:right-[31rem]">
+            <span className="absolute top-[12.7rem]  right-[3rem] md:right-[31rem]">
               {ToggleIcon}
             </span>
             <button
