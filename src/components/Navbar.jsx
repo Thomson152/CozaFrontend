@@ -65,7 +65,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-4 top-6 cursor-pointer md:hidden"
+          className="text-3xl absolute right-4 top-5 cursor-pointer md:hidden"
         >
           {open ? (
             <HiX className={scroll ? "text-black text-3xl" : ""} />
@@ -77,7 +77,7 @@ const Navbar = () => {
         <nav>
           {/* Mobile */}
           <ul
-            className={`md:hidden absolute top-[4rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${
+            className={`md:hidden absolute top-[4.5rem] right-[0rem] w-[100%]  bg-blue-500  px-4 text-white text-lg py-3 font-semibold space-y-5  transition-all ease-in  ${
               open ? "left-0 duration-300" : "left-[-100%] duration-300"
             }`}
           >
@@ -100,14 +100,14 @@ const Navbar = () => {
         <ul className="flex space-x-4 md:space-x-4 relative items-center right-7">
           <li>
             <Link to="/cart">
-              <BsCart4 className="text-3xl" />
+              <BsCart4 className="text-3xl " />
             </Link>
           </li>
           {userInfo ? (
-            <div className="inline-flex  rounded-md">
+            <div className="inline-flex pr-2 rounded-md">
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                className="px-4 py-2  text-lg font-bold text-gray-600   rounded-l-md"
+                className=" py-2 pr-2 text-lg font-bold text-gray-600   rounded-l-md"
               >
                 {userInfo.name}
               </Link>
