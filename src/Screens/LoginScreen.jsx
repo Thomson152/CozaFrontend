@@ -71,7 +71,7 @@ const LoginScreen = ({ history, location }) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="absolute top-[12.7rem]  right-[3rem] md:right-[31rem]">
+            <span className="absolute top-[12.7rem] md:top-[13.5rem]  right-[3rem] md:right-[31rem]">
               {ToggleIcon}
             </span>
             <button
@@ -84,7 +84,7 @@ const LoginScreen = ({ history, location }) => {
             <div className="text-center text-lg">
               New Customer?{" "}
               <Link
-                to={redirect ? `/register?redirect=${redirect}` : "/register"}
+                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-blue-500"
               >
                 Register
               </Link>
