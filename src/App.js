@@ -35,7 +35,7 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen}/>
             <Route path="/product/:id" component={ProductScreen}/>
             <Route path="/login" component={LoginScreen}/>
-            
+            <Route path="/register" component={RegisterScreen}/>
           
         </main>
      <Footer/>

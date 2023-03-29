@@ -46,17 +46,17 @@ const LoginScreen = ({ history, location }) => {
    
       {loading && <Loader />}
       <div className="flex justify-center relative conatiner items-center mt-32 mb-16">
-        <div className="bg-white md:w-[40%] w-[90%] h-[70%]  space-y-5 flex-col border-3 shadow flex py-[2rem] px-3 md:px-[3rem] ">
+        <div className="bg-white md:w-[40%] w-[90%] h-[100%]  space-y-5 flex-col border-3 shadow flex py-[2rem] px-3 md:px-[3rem] ">
           <form
             action=""
             onSubmit={submitHandler}
-            className="flex flex-col space-y-4 md:space-y-5"
+            className="flex flex-col space-y-6 md:space-y-7"
           >
             <div className=" flex justify-center mb-4">
               <img src={logo} alt="" />
             </div>
 
-            <h1 className="md:text-2xl text-xl pt-2 font-bold">SIGN IN</h1>
+            <h1 className="md:text-2xl text-xl pt-2 font-bold">LOG IN</h1>
             <input
               type="text"
               className="border  p-3 text-lg outline-none"
@@ -71,20 +71,20 @@ const LoginScreen = ({ history, location }) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="absolute top-[12.7rem] md:top-[13.5rem]  right-[3rem] md:right-[31rem]">
+            <span className="absolute top-[14rem] md:top-[14.2rem]  right-[3rem] md:right-[31rem]">
               {ToggleIcon}
             </span>
             <button
               type="submit"
-              className="hover:bg-slate-900 text-white px-14 text-center py-3 rounded-full text-xl bg-blue-600 "
+              className="hover:bg-slate-900 text-white px-14 text-center py-3 rounded-md text-xl bg-blue-600 "
             >
               <Link>Log In</Link>
             </button>
 
-            <div className="text-center text-lg">
+            <div className="text-center text-lg ">
               New Customer?{" "}
               <Link
-                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-blue-500"
+                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-white hover:bg-slate-900 bg-blue-600 text-lg rounded py-2 px-5"
               >
                 Register
               </Link>
