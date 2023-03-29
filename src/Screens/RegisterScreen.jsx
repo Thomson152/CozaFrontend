@@ -105,10 +105,10 @@ const RegisterScreen = ({history, location}) => {
               <Link>REGISTER</Link>
             </button>
 
-            <div className="text-center text-lg ">
+            <div className="text-center text-sm md:text-lg ">
               Already Have an account?{" "}
               <Link
-                to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-white hover:bg-slate-900 bg-blue-600 rounded text-lg py-2 px-3"
+                to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-white hover:bg-slate-900 bg-blue-600 rounded text-lg py-2 px-2"
               >
                 LOG IN
               </Link>
