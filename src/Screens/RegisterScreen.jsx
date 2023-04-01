@@ -108,7 +108,7 @@ const RegisterScreen = ({history, location}) => {
             <div className="text-center text-sm md:text-lg ">
               Already Have an account?{" "}
               <Link
-                to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-blue-500 text-lg"
+                to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-blue-500 text-sm md:text-lg"
               >
                 LOG IN
               </Link>

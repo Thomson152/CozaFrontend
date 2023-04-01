@@ -82,10 +82,10 @@ const LoginScreen = ({ history, location }) => {
               <Link>Log In</Link>
             </button>
 
-            <div className="text-center text-lg ">
+            <div className="text-center  text-sm md:text-lg ">
               New Customer?{" "}
               <Link
-                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-blue-800 text-lg"
+                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-blue-800 text-sm md:text-lg"
               >
                 Register
               </Link>
