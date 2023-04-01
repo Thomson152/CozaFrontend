@@ -24,29 +24,31 @@ const CartScreen = ({ match, location, history }) => {
     }
   }, [dispatch, productId, qty]);
 
-   const removeFromCartHandler = (id) => {
-    dispatch(removeFromCart(id))
-  }
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
   return (
     <div className="">
       <Navbar />
 
       {cartItems.length === 0 ? (
-        <div className="mt-[10rem] mb-[25rem]">
+        <div className="mt-[10rem] ml-20 mb-[25rem]">
           Your cart is empty <Link to="/">Go Back</Link>
         </div>
       ) : (
         <>
           <div className="mt-[7rem] mb-24 md:space-x-5 flex flex-col px-6 md:px-0 md:flex-row container  md:mx-auto">
             <div className="md:w-[70%] w-[100%]">
-              <h1 className="md:text-2xl text-xl font-bold mb-7">SHOPPING CART</h1>
+              <h1 className="md:text-2xl text-xl font-bold mb-7">
+                SHOPPING CART
+              </h1>
               <div className="">
                 <div class="relative overflow-x-auto">
                   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                       <tr>
                         <th scope="col" class="px-6  text-lg font-bold py-3">
-                          Product 
+                          Product
                         </th>
                         <th
                           scope="col"
@@ -95,32 +97,34 @@ const CartScreen = ({ match, location, history }) => {
 
                             <select
                               as="select"
-                              
                               value={item.qty}
                               onChange={(e) =>
                                 dispatch(
-                                addToCart(item.product, Number(e.target.value))
+                                  addToCart(
+                                    item.product,
+                                    Number(e.target.value)
+                                  )
                                 )
                               }
                               className="outline-0 
-                border md:w-18 p-4 bg-gray-100 w-20 "
+                            border md:w-18 p-4 bg-gray-100 w-20 "
                             >
-                              {[...Array(item.countInStock).keys()].map(
-                                (x) => (
-                                  <option key={x + 1} value={x + 1}>
-                                    {x + 1}
-                                  </option>
-                                )
-                              )}
+                              {[...Array(item.countInStock).keys()].map((x) => (
+                                <option key={x + 1} value={x + 1}>
+                                  {x + 1}
+                                </option>
+                              ))}
                             </select>
                           </td>
 
                           <td class="px-6 py-4 text-lg ">
                             {" "}
-                            <RiDeleteBin6Line 
-                            className="text-red-500" 
-                            
-                            onClick={() => removeFromCartHandler(item.product)}/>
+                            <RiDeleteBin6Line
+                              className="text-red-500"
+                              onClick={() =>
+                                removeFromCartHandler(item.product)
+                              }
+                            />
                           </td>
                         </tr>
                       ))}

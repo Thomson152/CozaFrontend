@@ -27,19 +27,19 @@ const RegisterScreen = ({history, location}) => {
   
     useEffect(() => {
   
-      if (error) {
-        toast.error(error)
-      }
       if (userInfo) {
         history.push(redirect);
       }
-    }, [history, userInfo, redirect, error]);
+    }, [history, userInfo, redirect]);
   
   
     const submitHandler = (e) => {
       e.preventDefault()
+      if (error) {
+        toast.error("All Input Field Required")
+      }
     if (password !== ConfirmPassword) {
-      toast.message("Passwords do not match")
+      toast.info("Passwords do not match")
     } else {
       dispatch(register(name, email, password))
     }
@@ -100,7 +100,7 @@ const RegisterScreen = ({history, location}) => {
             </span>
             <button
               type="submit"
-              className="hover:bg-slate-900 text-white px-14 text-center py-3 rounded-md text-lg bg-blue-600 "
+              className="hover:bg-blue-600 text-white px-14 text-center py-3 rounded-md text-lg bg-black "
             >
               <Link>REGISTER</Link>
             </button>
@@ -108,7 +108,7 @@ const RegisterScreen = ({history, location}) => {
             <div className="text-center text-sm md:text-lg ">
               Already Have an account?{" "}
               <Link
-                to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-white hover:bg-slate-900 bg-blue-600 rounded text-lg py-2 px-2"
+                to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-blue-500 text-lg"
               >
                 LOG IN
               </Link>

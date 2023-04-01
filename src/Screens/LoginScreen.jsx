@@ -8,7 +8,7 @@ import logo from "../images/logo-01.png";
 import usePasswordToggle from "../hooks/usePasswordToggle";
 import { login } from "../actions/userAction";
 import Loader from "../components/Loader";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const LoginScreen = ({ history, location }) => {
   const [PasswordInputType, ToggleIcon] = usePasswordToggle();
@@ -25,16 +25,17 @@ const LoginScreen = ({ history, location }) => {
 
   useEffect(() => {
 
-    if (error) {
-      toast.error(error)
-    }
+  
     if (userInfo) {
       history.push(redirect);
     }
-  }, [history, userInfo, redirect, error]);
+  }, [history, userInfo, redirect]);
 
 
   const submitHandler = (e) => {
+    if (error) {
+      toast.error(error)
+    }
     e.preventDefault();
     dispatch(login(email, password));
   };
@@ -76,7 +77,7 @@ const LoginScreen = ({ history, location }) => {
             </span>
             <button
               type="submit"
-              className="hover:bg-slate-900 text-white px-14 text-center py-3 rounded-md text-xl bg-blue-600 "
+              className="hover:bg-blue-800 text-white px-14 text-center py-3 rounded-md text-xl bg-black "
             >
               <Link>Log In</Link>
             </button>
@@ -84,7 +85,7 @@ const LoginScreen = ({ history, location }) => {
             <div className="text-center text-lg ">
               New Customer?{" "}
               <Link
-                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-white hover:bg-slate-900 bg-blue-600 text-lg rounded py-2 px-5"
+                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-blue-800 text-lg"
               >
                 Register
               </Link>

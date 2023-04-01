@@ -82,15 +82,15 @@ const ProductScreen = ({ match, history }) => {
                 ))}
               </select>
 
-              <Link
-                style={{ pointerEvents: product.countInStock === 0 }}
+              <button
+              disabled = { product.countInStock === 0}
                 onClick={addToCartHandler}
                 type="button"
                 className="bg-black py-2 mx-2 text-center hover:bg-blue-500 hover:text-white m px-6 text-lg rounded text-white"
               >
                 {" "}
                 Add to Cart
-              </Link>
+              </button>
             </div>
           </div>
         </div>
