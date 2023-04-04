@@ -137,7 +137,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                      href="#"
+                     to='/profile'
                       className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                     >
                       Profile

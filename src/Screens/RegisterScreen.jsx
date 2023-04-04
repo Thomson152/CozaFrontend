@@ -84,7 +84,7 @@ const RegisterScreen = ({history, location}) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="absolute top-[19rem] md:top-[20rem]  right-[3rem] md:right-[31rem]">
+            <span className="absolute top-[19rem] md:top-[20rem]  right-[3rem] md:right-[32rem]">
               {ToggleIcon}
             </span>
 
@@ -95,7 +95,7 @@ const RegisterScreen = ({history, location}) => {
               value={ConfirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
-            <span className="absolute top-[24rem] md:top-[25rem]  right-[3rem] md:right-[31rem]">
+            <span className="absolute top-[24rem] md:top-[25rem]  right-[3rem] md:right-[32rem]">
               {ToggleIcon}
             </span>
             <button
@@ -110,7 +110,7 @@ const RegisterScreen = ({history, location}) => {
               <Link
                 to={redirect ? `/login?redirect=${redirect}` : "/login"} className = "text-blue-500 text-sm md:text-lg"
               >
-                LOG IN
+                Log In
               </Link>
             </div>
           </form>
