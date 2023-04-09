@@ -39,7 +39,7 @@ function App() {
             <Route path="/register" component={RegisterScreen}/>
           
         </main>
-     <Footer/>
+  
       </Router>
          <ToastContainer />
 

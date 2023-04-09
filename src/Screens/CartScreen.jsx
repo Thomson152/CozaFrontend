@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 import { addToCart, removeFromCart } from "../actions/cartActions";
+import Footer from "../components/Footer";
 
 const CartScreen = ({ match, location, history }) => {
   const productId = match.params.id;
@@ -151,6 +152,7 @@ const CartScreen = ({ match, location, history }) => {
           </div>
         </>
       )}
+       <Footer/>
     </div>
   );
 };

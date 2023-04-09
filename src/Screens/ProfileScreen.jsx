@@ -1,16 +1,76 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Sidebar from '../components/Sidebar'
+/** @format */
+
+import React, { useState } from "react";
+
+import logo from "../images/logo-01.png";
+import { Link } from "react-router-dom";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const ProfileScreen = () => {
-  return (
-    
-       
-        <div className=' mt-[-1rem] mb-[-1rem] ' >
-            <Sidebar/>
-        </div>
-    
-  )
-}
 
-export default ProfileScreen
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="">
+      <div className="md:w-[30%] ">
+        <div className="absolute top-5  left-4 text-white cursor-pointer ">
+          <HiMenuAlt3
+            onClick={() => setOpen(!open)}
+            className="bg-slate-900 text-4xl px-2 rounded-md"
+          />
+        </div>
+
+        <div
+          className={`w-[300px]  fixed duration-500 top-0 bottom-0 bg-slate-800 overflow-y-auto h-screen  ${
+            open
+              ? "left-[0px] transition-all  ease-in "
+              : "left-[-300px] md:left-[0px] "
+          }`}
+        >
+          <div className="mt-20">
+            <div className="flex items-center px-10  text-xl font-bold text-white ">
+              <h1>USER</h1>
+
+              <div onClick={() => setOpen(!open)} className="text-3xl ">
+                <HiX className="ml-[6rem] md:hidden" />
+              </div>
+            </div>
+          </div>
+          <ul className="text-white text-xl   md:text-2xl flex shadow  flex-col gap-10 items-left ml-6 mt-[5rem]">
+            <div>
+              <li>
+                <Link className="hover:bg-blue-600 p-2.5  rounded-md" to="/">
+                  Home
+                </Link>
+              </li>
+            </div>
+            <div className="hover:bg-blue-600 p-2.5  rounded-md">
+              <li>
+                <Link>ProductDetails</Link>
+              </li>
+            </div>
+
+            <div className="hover:bg-blue-600 p-2.5  rounded-md">
+              <li>
+                {" "}
+                <Link>UserProfile</Link>
+              </li>
+            </div>
+
+            <div className="hover:bg-blue-600 p-2.5  rounded-md">
+              <li>
+                {" "}
+                <Link>UpdateProfile</Link>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <div className="md:w-[70%]">
+        <h1>hello</h1>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileScreen;

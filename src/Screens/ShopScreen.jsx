@@ -23,7 +23,7 @@ const ShopScreen = () => {
     <>
       <Navbar />
 
-      <div className="container md:mx-auto mt-[10rem]">
+      <div className="container md:mx-auto mb-[10rem] mt-[10rem]">
       {loading ? (
            <Loader/>
           ) : error ? (
@@ -38,8 +38,9 @@ const ShopScreen = () => {
               ))}
             </div>
           )}
+         
       </div>
-      
+      <Footer/>
     </>
   );
 };

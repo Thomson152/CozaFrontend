@@ -192,9 +192,9 @@ const HomeScreen = () => {
             </div>
           )}
         </div>
-     
+        <Footer/>
       </div>
-      
+     
     </>
   );
 };
