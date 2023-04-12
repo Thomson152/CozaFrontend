@@ -20,7 +20,7 @@ const ProfileScreen = () => {
         </div>
 
         <div
-          className={`w-[300px]  fixed duration-500 top-0 bottom-0 bg-slate-800 overflow-y-auto ${
+          className={`w-[300px] z-10 fixed duration-500 top-0 bottom-0 bg-slate-800 overflow-y-auto ${
             open
               ? "left-[0px] transition-all  ease-in "
               : "left-[-300px] md:left-[0px] "
@@ -28,10 +28,10 @@ const ProfileScreen = () => {
         >
           <div className="mt-20">
             <div className="flex items-center px-10  text-xl font-bold text-white ">
-              <h1>USER</h1>
+              {/* <h1>USER</h1> */}
 
               <div onClick={() => setOpen(!open)} className="text-3xl ">
-                <HiX className="ml-[6rem] md:hidden" />
+                <HiX className="ml-[10rem] md:hidden" />
               </div>
             </div>
           </div>
@@ -66,9 +66,10 @@ const ProfileScreen = () => {
         </div>
       </div>
 
-      <div className="md:w-[70%]  w-[100%] ">
+      <div className="md:w-[70%]  w-[100%]">
         <div className="flex justify-center items-center  h-screen">
-        <video className="w-[100%] h-[100%] object-fit:cover" src={VideoBg} autoPlay loop muted/>
+          {/* <h4 className ="text-2xl  font-semibold">Welcome To CozaStore</h4> */}
+        <video className="w-[100%] h-[50%]  " src={VideoBg} autoPlay loop muted/>
         </div>
        
       </div>
