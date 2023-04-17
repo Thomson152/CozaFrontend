@@ -21,6 +21,7 @@ import OrderScreen from "./Screens/OrderScreen";
 import ShopScreen from "./Screens/ShopScreen";
 import About from "./Screens/About";
 import Contact from "./Screens/Contact";
+import UserProfile from "./Screens/UserProfile";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/shop" component={ShopScreen}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
+            <Route path="/user" component={UserProfile}/>
             <Route path="/profile" component={ProfileScreen}/>
             <Route path="/cart/:id?" component={CartScreen}/>
             <Route path="/product/:id" component={ProductScreen}/>

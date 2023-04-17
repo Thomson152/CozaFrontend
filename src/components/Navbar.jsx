@@ -39,6 +39,7 @@ const Navbar = () => {
   return (
     <header>
       <nav
+      
         className={`flex fixed w-full z-10 top-[0rem] items-center  py-5  px-6 justify-between bg-white   ${
           scroll ? "md:bg-white shadow" : "md:bg-white shadow"
         }`}
@@ -104,15 +105,15 @@ const Navbar = () => {
             </Link>
           </li>
           {userInfo ? (
-            <div className="inline-flex pr-2 rounded-md">
+            <div className="inline-flex pr-2   rounded-md"  >
               <Link
-                onClick={() => setdropdownOpen(!dropdownOpen)}
+                onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2 text-lg font-bold text-gray-600   rounded-l-md"
               >
                 {userInfo.name}
               </Link>
 
-              <div className="relative">
+              <div className="relative" onMouseLeave={()=>setdropdownOpen(false)}  >
                 <button
                   type="button"
                   onClick={() => setdropdownOpen(!dropdownOpen)}
@@ -122,6 +123,7 @@ const Navbar = () => {
                 </button>
 
                 <div
+               
                   className={`${
                     dropdownOpen
                       ? `top-full opacity-100 visible`

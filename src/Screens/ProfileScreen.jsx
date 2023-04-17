@@ -35,7 +35,7 @@ const ProfileScreen = () => {
               </div>
             </div>
           </div>
-          <ul className="text-white text-xl   md:text-2xl flex shadow  flex-col gap-10 items-left ml-6 mt-[5rem]">
+          <ul className="text-white text-xl   md:text-2xl flex flex-col gap-10 items-left ml-6 mt-[5rem]">
             <div>
               <li>
                 <Link className="hover:bg-blue-600 p-2.5  rounded-md" to="/">
@@ -52,7 +52,7 @@ const ProfileScreen = () => {
             <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
                 {" "}
-                <Link>UserProfile</Link>
+                <Link to = '/user'>UserProfile</Link>
               </li>
             </div>
 

@@ -10,7 +10,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import logo from "../images/logo-01.png";
 import { CgProfile } from "react-icons/cg";
-import { logout } from '../actions/userAction'
+import { logout } from "../actions/userAction";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -28,12 +28,11 @@ const Header = () => {
     window.addEventListener("scroll", handleScoll);
   }, []);
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const logoutHandler = () => {
-      dispatch(logout())
-    }
-  
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -106,35 +105,48 @@ const Header = () => {
             </Link>
           </li>
           {userInfo ? (
-            <div className="inline-flex  rounded-md">
+            <div
+              className="inline-flex  rounded-md"
+              
+            >
               <Link
-                onClick={()=>setdropdownOpen(!dropdownOpen)}
+                // onClick={() => setdropdownOpen(!dropdownOpen)}
+                onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2  text-lg font-bold text-gray-600 hover:text-gray-700  rounded-l-md"
               >
                 {userInfo.name}
               </Link>
 
-              <div className="relative">
+              <div
+                className="relative  "
+                onMouseLeave={()=>setdropdownOpen(false)}
+              >
                 <button
+                  onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                   type="button"
-                  onClick={()=>setdropdownOpen(!dropdownOpen)}
+                  onClick={() => setdropdownOpen(!dropdownOpen)}
                   className="inline-flex items-center justify-center h-full px-0 text-gray-600   hover:text-gray-700 rounded-r-md "
                 >
-                  <RiArrowDownSLine className="text-2xl"/>
+                  <RiArrowDownSLine className="text-2xl" />
                 </button>
-                
 
-                <div className={`${dropdownOpen ? `top-full opacity-100 visible` : `top-[110%] invisible opacity-0`} absolute right-0 z-10 w-[13rem] mt-6  transition-all bg-white border border-gray-100 rounded shadow`}>
+                <div
+                  className={`${
+                    dropdownOpen
+                      ? `top-full opacity-100 visible`
+                      : `top-[110%] invisible opacity-0`
+                  } absolute right-0 z-10 w-[13rem] mt-6  transition-all bg-white border border-gray-100 rounded shadow`}
+                >
                   <div className="p-2">
                     <Link
-                       onClick={logoutHandler}
+                      onClick={logoutHandler}
                       className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                     >
                       Logout
                     </Link>
 
                     <Link
-                      to = '/profile'
+                      to="/profile"
                       className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                     >
                       Profile
