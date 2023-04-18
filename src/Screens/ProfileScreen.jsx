@@ -36,16 +36,16 @@ const ProfileScreen = () => {
             </div>
           </div>
           <ul className="text-white text-xl   md:text-2xl flex flex-col gap-10 items-left ml-6 mt-[5rem]">
-            <div>
+          
+          <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
-                <Link className="hover:bg-blue-600 p-2.5  rounded-md" to="/">
-                  Home
-                </Link>
+                <Link>Home</Link>
               </li>
             </div>
+
             <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
-                <Link>ProductDetails</Link>
+                <Link>Orders</Link>
               </li>
             </div>
 
@@ -59,7 +59,7 @@ const ProfileScreen = () => {
             <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
                 {" "}
-                <Link>UpdateProfile</Link>
+                <Link>Settings</Link>
               </li>
             </div>
           </ul>
@@ -67,8 +67,8 @@ const ProfileScreen = () => {
       </div>
 
       <div className="md:w-[70%]  w-[100%]">
-        <div className="flex justify-center items-center  h-screen">
-          {/* <h4 className ="text-2xl  font-semibold">Welcome To CozaStore</h4> */}
+        <div className="flex justify-center flex-col items-center  h-screen">
+          <h4 className ="md:text-4xl text-2xl  mb-[5rem]  font-semibold">Welcome To CozaStore</h4>
         <video className="w-[100%] h-[50%]  " src={VideoBg} autoPlay loop muted/>
         </div>
        

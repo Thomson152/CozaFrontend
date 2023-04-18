@@ -76,6 +76,7 @@ const Header = () => {
         </div>
 
         <nav>
+          
           {/* Mobile */}
           <ul
             className={`md:hidden absolute top-[4.4rem] right-[0rem] w-[100%] text-xl bg-blue-500 px-4 text-white  py-3 font-semibold space-y-5  transition-all ease-in  ${
@@ -110,7 +111,7 @@ const Header = () => {
               
             >
               <Link
-                // onClick={() => setdropdownOpen(!dropdownOpen)}
+                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2  text-lg font-bold text-gray-600 hover:text-gray-700  rounded-l-md"
               >

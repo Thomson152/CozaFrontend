@@ -107,6 +107,7 @@ const Navbar = () => {
           {userInfo ? (
             <div className="inline-flex pr-2   rounded-md"  >
               <Link
+               onClick={() => setdropdownOpen(!dropdownOpen)}
                 onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2 text-lg font-bold text-gray-600   rounded-l-md"
               >

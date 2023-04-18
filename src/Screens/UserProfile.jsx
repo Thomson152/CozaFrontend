@@ -15,7 +15,7 @@ const UserProfile = () => {
             <img src={profile} alt=""  className="md:w-[100%] md:h-[35vh] w-40 h-40 rounded-full "/>
           </div>
         </div>
-        <div className="md:w-[50%] px-[3rem] md:px-[2rem] my-20 ">
+        <div className="md:w-[50%] px-[1.2rem] md:px-[2rem] my-20 ">
           <h4 className="md:text-left text-center text-2xl">
             Personal Information
           </h4>
