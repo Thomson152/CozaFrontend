@@ -10,7 +10,7 @@ const Setting = () => {
     <div>
       <Navbar/>
       <div className="relative top-[8rem] ml-4 md:ml-10  ">
-      <Link to='/profile' className = 'p-4 py-3 rounded text-bg font-bold bg-black text-white'>Go Back</Link>
+      <Link to='/profile' className = 'p-4 py-3 rounded text-bg font-bold  text-black'>Go Back</Link>
       </div>
       
       <div className="flex flex-col md:flex-row md:justify-center mb-[10rem] md:items-center mt-[12rem] container">

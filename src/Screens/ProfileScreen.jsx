@@ -69,7 +69,7 @@ const ProfileScreen = () => {
           <h4 className="md:text-4xl text-2xl   font-semibold">
             Welcome To CozaStore
           </h4>
-          <p className="text-xl mb-[5rem]">We make online selling superbly easy</p>
+          <p className="md:text-xl text-lg mb-[5rem]">We make online selling superbly easy</p>
           <video
             className="w-[100%] h-[50%]  "
             src={VideoBg}

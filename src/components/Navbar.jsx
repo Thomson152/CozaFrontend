@@ -66,7 +66,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-4 top-5 cursor-pointer md:hidden"
+          className="text-3xl absolute right-4 top-6 cursor-pointer md:hidden"
         >
           {open ? (
             <HiX className={scroll ? "text-black text-3xl" : ""} />
@@ -98,7 +98,7 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <ul className="flex space-x-4 md:space-x-4 relative items-center right-7">
+        <ul className="flex space-x-3 md:space-x-4 relative items-center right-7">
           <li>
             <Link to="/cart">
               <BsCart4 className="text-3xl " />

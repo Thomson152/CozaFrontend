@@ -99,7 +99,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <ul className="flex space-x-5 items-center relative right-7">
+        <ul className="flex space-x-3 md:space-x-4 items-center relative right-7">
           <li>
             <Link to="/cart">
               <BsCart4 className="text-3xl" />

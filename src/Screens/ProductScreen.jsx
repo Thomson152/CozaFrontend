@@ -32,7 +32,7 @@ const ProductScreen = ({ match, history }) => {
       <Navbar />
       <Link
         to="/shop"
-        className="text-xl relative top-32 md:left-24 left-14 py-3  text-black rounded-full"
+        className="text-xl relative  top-20 md:left-24 left-12 py-3  text-black rounded-full"
       >
         Go Back
       </Link>
@@ -64,7 +64,7 @@ const ProductScreen = ({ match, history }) => {
 
             <div className="flex pt-3 flex-col">
               <h1 className="text-xl font-bold">Description:</h1>
-              <p className="text-lg py-2">{product.description}</p>
+              <p className="md:text-lg text-sm py-2">{product.description}</p>
             </div>
 
             <div className="pt-3 ">
