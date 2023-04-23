@@ -1,13 +1,12 @@
 /** @format */
 
 import React, { useState } from "react";
-import VideoBg from "../images/Ecommerce.mp4"
+import VideoBg from "../images/Ecommerce.mp4";
 import logo from "../images/logo-01.png";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const ProfileScreen = () => {
-
   const [open, setOpen] = useState(false);
   return (
     <div className="flex md:flex-row flex-col relative w-[100%]">
@@ -20,7 +19,7 @@ const ProfileScreen = () => {
         </div>
 
         <div
-          className={`w-[300px] z-10 fixed duration-500 top-0 bottom-0 bg-slate-800 overflow-y-auto ${
+          className={`w-[300px] z-10 shadow fixed duration-500 top-0 bottom-0 bg-slate-800 overflow-y-auto ${
             open
               ? "left-[0px] transition-all  ease-in "
               : "left-[-300px] md:left-[0px] "
@@ -36,10 +35,9 @@ const ProfileScreen = () => {
             </div>
           </div>
           <ul className="text-white text-xl   md:text-2xl flex flex-col gap-10 items-left ml-6 mt-[5rem]">
-          
-          <div className="hover:bg-blue-600 p-2.5  rounded-md">
+            <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
-                <Link>Home</Link>
+                <Link to="/">Home</Link>
               </li>
             </div>
 
@@ -52,14 +50,14 @@ const ProfileScreen = () => {
             <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
                 {" "}
-                <Link to = '/user'>UserProfile</Link>
+                <Link to="/user">UserProfile</Link>
               </li>
             </div>
 
             <div className="hover:bg-blue-600 p-2.5  rounded-md">
               <li>
                 {" "}
-                <Link>Settings</Link>
+                <Link to="/setting">Settings</Link>
               </li>
             </div>
           </ul>
@@ -67,11 +65,19 @@ const ProfileScreen = () => {
       </div>
 
       <div className="md:w-[70%]  w-[100%]">
-        <div className="flex justify-center flex-col items-center  h-screen">
-          <h4 className ="md:text-4xl text-2xl  mb-[5rem]  font-semibold">Welcome To CozaStore</h4>
-        <video className="w-[100%] h-[50%]  " src={VideoBg} autoPlay loop muted/>
+        <div className="flex justify-center flex-col space-y-3 items-center  h-screen">
+          <h4 className="md:text-4xl text-2xl   font-semibold">
+            Welcome To CozaStore
+          </h4>
+          <p className="text-xl mb-[5rem]">We make online selling superbly easy</p>
+          <video
+            className="w-[100%] h-[50%]  "
+            src={VideoBg}
+            autoPlay
+            loop
+            muted
+          />
         </div>
-       
       </div>
     </div>
   );

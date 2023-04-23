@@ -22,6 +22,7 @@ import ShopScreen from "./Screens/ShopScreen";
 import About from "./Screens/About";
 import Contact from "./Screens/Contact";
 import UserProfile from "./Screens/UserProfile";
+import Setting from "./Screens/Setting";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen}/>
             <Route path="/product/:id" component={ProductScreen}/>
             <Route path="/login" component={LoginScreen}/>
+            <Route path="/setting" component={Setting}/>
             <Route path="/register" component={RegisterScreen}/>
           
         </main>
