@@ -25,7 +25,9 @@ const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
+  userUpdateProfile: userUpdateProfileReducer,
   userLogin: userLoginReducer,
+  userDetails: userDetailsReducer,
   userRegister: userRegisterReducer,
 });
 

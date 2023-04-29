@@ -66,10 +66,13 @@ const ProfileScreen = () => {
 
       <div className="md:w-[70%]  w-[100%]">
         <div className="flex justify-center flex-col space-y-3 items-center  h-screen">
+          <div className="mb-[2rem]">
           <h4 className="md:text-4xl text-2xl   font-semibold">
             Welcome To CozaStore
           </h4>
-          <p className="md:text-xl text-lg mb-[5rem]">We make online selling superbly easy</p>
+          <p className="md:text-sm text-sm text-center">We make online selling superbly easy</p>
+          </div>
+    
           <video
             className="w-[100%] h-[50%]  "
             src={VideoBg}

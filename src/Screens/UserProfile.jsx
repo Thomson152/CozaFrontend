@@ -7,6 +7,28 @@ import profile from "../images/profile.jpeg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const UserProfile = () => {
+
+  const dispatch = useDispatch();
+
+  const userDetails = useSelector((state) => state.userDetails);
+  const { loading, error, user } = userDetails;
+
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  useEffect(() => {
+    if (!userInfo) {
+      history.push("/login");
+    } else {
+      if (!user.name) {
+        dispatch(getUserDetails('profile'))
+     
+      } else {
+        setName(user.name);
+        setEmail(user.email);
+      }
+    }
+  }, [dispatch, history, userInfo, user]);
   return (
     <div>
       <Navbar />

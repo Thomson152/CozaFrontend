@@ -1,25 +1,61 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+/** @format */
+
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 import profile from "../images/profile.jpeg";
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-import Footer from '../components/Footer';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import Footer from "../components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserDetails } from "../actions/userAction";
 
+const Setting = ({ history }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState(null);
 
-const Setting = () => {
+  const dispatch = useDispatch();
+
+  const userDetails = useSelector((state) => state.userDetails);
+  const { loading, error, user } = userDetails;
+
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  useEffect(() => {
+    if (!userInfo) {
+      history.push("/login");
+    } else {
+      if (!user.name) {
+        dispatch(getUserDetails('profile'))
+     
+      } else {
+        setName(user.name);
+        setEmail(user.email);
+      }
+    }
+  }, [dispatch, history, userInfo, user]);
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="relative top-[8rem] ml-4 md:ml-10  ">
-      <Link to='/profile' className = 'p-4 py-3 rounded text-bg font-bold  text-black'>Go Back</Link>
+        <Link
+          to="/profile"
+          className="p-4 py-3 rounded text-bg font-bold  text-black"
+        >
+          Go Back
+        </Link>
       </div>
-      
-      <div className="flex flex-col md:flex-row md:justify-center mb-[10rem] md:items-center mt-[12rem] container">
 
-      
+      <div className="flex flex-col md:flex-row md:justify-center mb-[10rem] md:items-center mt-[12rem] container">
         <div className="md:w-[50%] items-center justify-center flex ">
-          
           <div className="md:w-[50%] md:h-[35vh] w-40 h-40 rounded-full ">
-            <img src={profile} alt=""  className="md:w-[100%] md:h-[35vh] w-40 h-40 rounded-full "/>
+            <img
+              src={profile}
+              alt=""
+              className="md:w-[100%] md:h-[35vh] w-40 h-40 rounded-full "
+            />
           </div>
         </div>
         <div className="md:w-[50%] px-[1rem] md:px-[2rem] my-20 ">
@@ -28,15 +64,37 @@ const Setting = () => {
           </h4>
 
           <form className="flex flex-col space-y-6 mt-6">
-            <input placeholder='Name'  className="border  p-3  text-lg outline-none"/>
+            <input
+              type='name'
+              placeholder='Enter name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="border  p-3  text-lg outline-none"
+            />
 
-            <input placeholder='Email Address'  className="border  p-3  text-lg outline-none"/>
-      
+            <input
+             type='email'
+             placeholder='Enter email'
+             value={email}
+             onChange={(e) => setEmail(e.target.value)}
+              className="border  p-3  text-lg outline-none"
+            />
 
-            <input placeholder='Password'  className="border  p-3  text-lg outline-none"/>
-      
+            <input
+               type='password'
+               placeholder='Enter password'
+               value={password}
+               onChange={(e) => setPassword(e.target.value)}
+              className="border  p-3  text-lg outline-none"
+            />
 
-            <input placeholder='Confirm Password'  className="border  p-3  text-lg outline-none"/>
+            <input
+              type='password'
+              placeholder='Confirm password'
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="border  p-3  text-lg outline-none"
+            />
 
             <button
               type="submit"
@@ -44,14 +102,12 @@ const Setting = () => {
             >
               <Link>Update</Link>
             </button>
-      
           </form>
-       
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Setting
+export default Setting;
