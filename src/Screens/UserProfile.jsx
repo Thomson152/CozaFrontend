@@ -1,13 +1,17 @@
 /** @format */
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import profile from "../images/profile.jpeg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserDetails } from "../actions/userAction";
+import Loader from "../components/Loader";
 
-const UserProfile = () => {
-
+const UserProfile = ({history}) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [admin, setAdmin] = useState();
   const dispatch = useDispatch();
 
   const userDetails = useSelector((state) => state.userDetails);
@@ -26,6 +30,8 @@ const UserProfile = () => {
       } else {
         setName(user.name);
         setEmail(user.email);
+       
+       
       }
     }
   }, [dispatch, history, userInfo, user]);
@@ -47,26 +53,29 @@ const UserProfile = () => {
           <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
             Personal Information
           </h4>
-          <div className="flex flex-col mt-10 gap-6 ">
+          {loading ? (<Loader/>) : error  ? (
+              error
+            ) : (       <div className="flex flex-col mt-10 gap-6 ">
             <div className="flex items-center">
               <span className="md:text-xl font-semibold text-lg items-center">Name</span>:{" "}
-              <h1 className="text-lg pl-2">Thomson</h1>
+              <h1 className="text-lg pl-2">{name}</h1>
             </div>
             <div className="flex items-center">
               <span className="md:text-xl font-semibold text-lg">Email</span>:{" "}
-              <h1 className="text-lg  pl-2 ">tomsinonyedikachi@gmail.com</h1>
+              <h1 className="text-lg  pl-2 ">{email}</h1>
             </div>
 
             <div className="flex items-center">
-              <span className="md:text-xl font-semibold text-lg ">Address</span>:{" "}
-              <h1 className="text-lg"></h1>
+              <span className="md:text-xl font-semibold text-lg ">Admin</span>:{" "}
+              <h1 className="text-lg pl-2">{admin}</h1>
             </div>
 
             <div className="flex items-center">
               <span className="md:text-xl font-semibold text-lg">Phone number</span>:{" "}
               <h1 className="text-lg"></h1>
             </div>
-          </div>
+          </div>)}
+   
         </div>
       </div>
       <Footer />

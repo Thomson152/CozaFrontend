@@ -7,6 +7,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Footer from "../components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserDetails } from "../actions/userAction";
+import Loader from "../components/Loader";
 
 const Setting = ({ history }) => {
   const [name, setName] = useState("");
@@ -62,8 +63,11 @@ const Setting = ({ history }) => {
           <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
             Update Information
           </h4>
-
-          <form className="flex flex-col space-y-6 mt-6">
+          {
+            loading ? (<Loader/>) : error  ? (
+              error
+            ) : (
+              <form className="flex flex-col space-y-6 mt-6">
             <input
               type='name'
               placeholder='Enter name'
@@ -103,6 +107,10 @@ const Setting = ({ history }) => {
               <Link>Update</Link>
             </button>
           </form>
+            )
+          }
+
+          
         </div>
       </div>
       <Footer />
