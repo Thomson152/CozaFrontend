@@ -39,7 +39,6 @@ const Navbar = () => {
   return (
     <header>
       <nav
-      
         className={`flex fixed w-full z-10 top-[0rem] items-center  py-5  px-6 justify-between bg-white   ${
           scroll ? "md:bg-white shadow" : "md:bg-white shadow"
         }`}
@@ -78,7 +77,7 @@ const Navbar = () => {
         <nav>
           {/* Mobile */}
           <ul
-             className={`md:hidden absolute flex flex-col  top-[70px] w-[100%]  bg-slate-500  items-center border-t-2  px-4 text-white  py-3 font-semibold space-y-5  transition-all ease-in  ${
+            className={`md:hidden absolute flex flex-col  top-[70px] w-[100%]  bg-slate-800  items-center border-t-2  px-4 text-white  py-3 font-semibold space-y-5  transition-all ease-in  ${
               open ? "left-0 duration-300 z-10" : "left-[-110%] duration-300"
             }`}
           >
@@ -89,7 +88,7 @@ const Navbar = () => {
               <Link to="/shop">Shop</Link>
             </li>
 
-            <li  className="p-[1rem] text-xl font-bold">
+            <li className="p-[1rem] text-xl font-bold">
               <Link to="/about">About</Link>
             </li>
             <li className="p-[1rem]  text-xl font-bold">
@@ -105,16 +104,20 @@ const Navbar = () => {
             </Link>
           </li>
           {userInfo ? (
-            <div className="inline-flex pr-2   rounded-md"  >
+            <div className="inline-flex pr-2   rounded-md">
               <Link
-               onClick={() => setdropdownOpen(!dropdownOpen)}
+                onClick={() => setdropdownOpen(!dropdownOpen)}
                 onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2 text-lg font-bold text-black   rounded-l-md"
               >
                 Dropdown
               </Link>
 
-              <div className="relative" onMouseLeave={()=>setdropdownOpen(false)}  >
+              <div
+                className="relative"
+                onClick={() => setdropdownOpen(false)}
+                onMouseLeave={() => setdropdownOpen(false)}
+              >
                 <button
                   type="button"
                   onClick={() => setdropdownOpen(!dropdownOpen)}
@@ -124,7 +127,6 @@ const Navbar = () => {
                 </button>
 
                 <div
-               
                   className={`${
                     dropdownOpen
                       ? `top-full opacity-100 visible`
@@ -134,14 +136,14 @@ const Navbar = () => {
                   <div className="p-2">
                     <Link
                       onClick={logoutHandler}
-                      className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
+                      className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-200 hover:text-gray-700"
                     >
                       Logout
                     </Link>
 
                     <Link
-                     to='/profile'
-                      className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
+                      to="/profile"
+                      className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-200 hover:text-gray-700"
                     >
                       Profile
                     </Link>

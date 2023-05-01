@@ -33,11 +33,12 @@ const LoginScreen = ({ history, location }) => {
 
 
   const submitHandler = (e) => {
+  
+    e.preventDefault();
+    dispatch(login(email, password));
     if (error) {
       toast.error(error)
     }
-    e.preventDefault();
-    dispatch(login(email, password));
   };
  
 
@@ -49,7 +50,6 @@ const LoginScreen = ({ history, location }) => {
       <div className="flex justify-center relative conatiner items-center mt-32 mb-16">
         <div className="bg-white md:w-[40%] w-[90%] h-[100%]  space-y-5 flex-col border-3 shadow flex py-[2rem] px-3 md:px-[3rem] ">
           <form
-            action=""
             onSubmit={submitHandler}
             className="flex flex-col space-y-6 md:space-y-7"
           >

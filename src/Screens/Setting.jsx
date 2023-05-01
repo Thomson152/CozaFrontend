@@ -5,8 +5,9 @@ import Navbar from "../components/Navbar";
 import profile from "../images/profile.jpeg";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Footer from "../components/Footer";
+import {  toast } from 'react-toastify';
 import { useDispatch, useSelector } from "react-redux";
-import { getUserDetails } from "../actions/userAction";
+import { getUserDetails, updateUserProfile } from "../actions/userAction";
 import Loader from "../components/Loader";
 
 const Setting = ({ history }) => {
@@ -24,26 +25,41 @@ const Setting = ({ history }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
+  const { success } = userUpdateProfile
   useEffect(() => {
     if (!userInfo) {
       history.push("/login");
     } else {
-      if (!user.name) {
-        dispatch(getUserDetails('profile'))
-     
+      if ( !user || !user.name) {
+        dispatch(getUserDetails("profile"));
       } else {
         setName(user.name);
         setEmail(user.email);
       }
     }
-  }, [dispatch, history, userInfo, user]);
+
+   
+  }, [dispatch, history, userInfo, user, success]);
+
+
+  const submitHandler = (e) => {
+    e.preventDefault()
+ 
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match')
+    } else {
+      dispatch(updateUserProfile({ id: user._id, name, email, password }))
+      toast.info('Profile Updated')
+    }
+  }
   return (
     <div>
       <Navbar />
       <div className="relative top-[8rem] ml-4 md:ml-10  ">
         <Link
           to="/profile"
-          className="p-4 py-3 rounded text-bg font-bold  text-black"
+          className="p-4 py-3 rounded text-bg  "
         >
           Go Back
         </Link>
@@ -63,54 +79,53 @@ const Setting = ({ history }) => {
           <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
             Update Information
           </h4>
-          {
-            loading ? (<Loader/>) : error  ? (
-              error
-            ) : (
-              <form className="flex flex-col space-y-6 mt-6">
-            <input
-              type='name'
-              placeholder='Enter name'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="border  p-3  text-lg outline-none"
-            />
+          {loading ? (
+            <Loader />
+          ) : error ? (
+            error
+          ) : (
+            <form onSubmit={submitHandler} className="flex flex-col space-y-6 mt-6">
+              <input
+                type="name"
+                placeholder="Enter name"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                
+                className="border  p-3  text-lg outline-none"
+              />
 
-            <input
-             type='email'
-             placeholder='Enter email'
-             value={email}
-             onChange={(e) => setEmail(e.target.value)}
-              className="border  p-3  text-lg outline-none"
-            />
+              <input
+                type="email"
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border  p-3  text-lg outline-none"
+              />
 
-            <input
-               type='password'
-               placeholder='Enter password'
-               value={password}
-               onChange={(e) => setPassword(e.target.value)}
-              className="border  p-3  text-lg outline-none"
-            />
+              <input
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="border  p-3  text-lg outline-none"
+              />
 
-            <input
-              type='password'
-              placeholder='Confirm password'
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              className="border  p-3  text-lg outline-none"
-            />
+              <input
+                type="password"
+                placeholder="Confirm password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className="border  p-3  text-lg outline-none"
+              />
 
-            <button
-              type="submit"
-              className="hover:bg-blue-800 text-white px-14 text-center py-3 rounded-md text-xl bg-black "
-            >
-              <Link>Update</Link>
-            </button>
-          </form>
-            )
-          }
-
-          
+              <button
+                type="submit"
+                className="hover:bg-blue-800 bg-slate-800 text-white px-14 text-center py-3 rounded-md text-xl  "
+              >
+                Update
+              </button>
+            </form>
+          )}
         </div>
       </div>
       <Footer />
