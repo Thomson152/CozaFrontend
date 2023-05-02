@@ -56,7 +56,7 @@ const UserProfile = ({ history }) => {
           </div>
         </div>
         <div className="md:w-[50%] px-[1rem] md:px-[2rem] my-20 ">
-          <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
+          <h4 className="md:text-left text-center font-bold md:text-3xl text-xl">
             Personal Information
           </h4>
           {loading ? (
@@ -66,23 +66,23 @@ const UserProfile = ({ history }) => {
           ) : (
             <div className="flex flex-col mt-10 gap-6 ">
               <div className="flex items-center">
-                <span className="md:text-xl text-lg font-semibold text-lg items-center">
+                <span className="text-sm md:text-lg font-semibold text-sm md:text-lg items-center">
                   Name
                 </span>
                 : <h1 className="md:text-lg text-sm pl-2">{name}</h1>
               </div>
               <div className="flex items-center">
-                <span className="md:text-xl font-semibold text-lg">Email</span>:{" "}
+                <span className="md:text-xl font-semibold text-sm md:text-lg">Email</span>:{" "}
                 <h1 className="md:text-lg text-sm   pl-2 ">{email}</h1>
               </div>
 
               <div className="flex items-center">
-                <span className="md:text-xl font-semibold text-lg ">Admin</span>
+                <span className="md:text-xl font-semibold text-sm md:text-lg">Admin</span>
                 : <h1 className="text-lg pl-2">{admin}</h1>
               </div>
 
               <div className="flex items-center">
-                <span className="md:text-xl font-semibold text-lg">
+                <span className="md:text-xl font-semibold text-sm md:text-lg">
                   Phone number
                 </span>
                 : <h1 className="text-lg"></h1>

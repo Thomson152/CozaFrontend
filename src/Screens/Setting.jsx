@@ -35,8 +35,8 @@ const Setting = ({ history }) => {
       if (!user.name) {
         dispatch(getUserDetails("profile"));
       } else {
-        setName(userInfo.name);
-        setEmail(userInfo.email);
+        setName(user.name);
+        setEmail(user.email);
       }
     }
   },[dispatch, history, userInfo, user, success]);
@@ -74,7 +74,7 @@ const Setting = ({ history }) => {
           </div>
         </div>
         <div className="md:w-[50%] px-[1rem] md:px-[2rem] my-20 ">
-          <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
+          <h4 className="md:text-left text-center font-bold md:text-3xl text-xl">
             Update Information
           </h4>
           {loading && <Loader />}
@@ -103,7 +103,7 @@ const Setting = ({ history }) => {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="border  p-3  text-lg outline-none"
+              className="border  p-3  text-sm md:text-lg outline-none"
             />
 
             <input
@@ -111,12 +111,12 @@ const Setting = ({ history }) => {
               placeholder="Confirm password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="border  p-3  text-lg outline-none"
+              className="border  p-3 text-sm md:text-lg outline-none"
             />
 
             <button
               type="submit"
-              className="hover:bg-blue-800 bg-slate-800 text-white px-14 text-center py-3 rounded-md text-xl  "
+              className="hover:bg-blue-800 bg-slate-800 text-white px-14 text-center py-3 rounded-md text-sm md:text-lg "
             >
               Update
             </button>
