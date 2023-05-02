@@ -27,11 +27,11 @@ const UserProfile = ({ history }) => {
       if (!user.name) {
         dispatch(getUserDetails("profile"));
       } else {
-        setName(user.name);
-        setEmail(user.email);
+        setName(userInfo.name);
+        setEmail(userInfo.email);
       }
     }
-  }, [dispatch, history, userInfo, user]);
+  }, [dispatch, history, user, userInfo]);
   return (
     <div>
       <Navbar />
@@ -66,14 +66,14 @@ const UserProfile = ({ history }) => {
           ) : (
             <div className="flex flex-col mt-10 gap-6 ">
               <div className="flex items-center">
-                <span className="md:text-xl font-semibold text-lg items-center">
+                <span className="md:text-xl text-lg font-semibold text-lg items-center">
                   Name
                 </span>
-                : <h1 className="text-lg pl-2">{name}</h1>
+                : <h1 className="md:text-lg text-sm pl-2">{name}</h1>
               </div>
               <div className="flex items-center">
                 <span className="md:text-xl font-semibold text-lg">Email</span>:{" "}
-                <h1 className="text-lg  pl-2 ">{email}</h1>
+                <h1 className="md:text-lg text-sm   pl-2 ">{email}</h1>
               </div>
 
               <div className="flex items-center">
