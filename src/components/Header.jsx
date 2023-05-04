@@ -45,7 +45,7 @@ const Header = () => {
         }`}
       >
         <div className="flex items-center space-x-24">
-          <img src={logo} alt="" className="w-28 h-5" />
+          <img src={logo} alt="" className="md:w-28 md:h-5 w-20 h-4" />
 
           <ul className="hidden md:flex space-x-5 font-semibold text-neutral-500 text-lg items-center">
             <li>
@@ -68,31 +68,31 @@ const Header = () => {
           onClick={() => setOpen(!open)}
           className="text-3xl absolute right-4 top-6 cursor-pointer md:hidden"
         >
-          {open ? (
-            <HiX className={scroll ? "text-black " : ""} />
+           {open ? (
+            <HiX className={scroll ? "text-black text-2xl" : "text-2xl"} />
           ) : (
-            <HiMenuAlt3 className={scroll ? "text-black" : ""} />
+            <HiMenuAlt3 className={scroll ? "text-black text-2xl" : "text-2xl"} />
           )}
         </div>
 
         <nav>
           {/* Mobile */}
           <ul
-            className={`md:hidden absolute flex flex-col  top-[70px] w-[100%]  bg-slate-800  items-center border-t-2  px-4 text-white  py-3 font-semibold space-y-5  transition-all ease-in  ${
+            className={`md:hidden absolute flex flex-col  top-[70px] w-[100%]  bg-slate-800   border-t-2  px-4 text-white  py-3 font-semibold space-y-5  transition-all ease-in  ${
               open ? "left-0 duration-300 z-10" : "left-[-110%] duration-300"
             }`}
           >
-            <li className="p-[1rem] text-xl font-bold">
+            <li className="p-[1rem] md:text-xl text-[18px] font-bold">
               <Link to="/">Home</Link>
             </li>
-            <li className="p-[1rem]  text-xl font-bold">
+            <li className="p-[1rem]  md:text-xl text-[18px] font-bold">
               <Link to="/shop">Shop</Link>
             </li>
 
-            <li className="p-[1rem] text-xl font-bold">
+            <li className="p-[1rem] md:text-xl text-[18px] font-bold">
               <Link to="/about">About</Link>
             </li>
-            <li className="p-[1rem]  text-xl font-bold">
+            <li className="p-[1rem]  md:text-xl text-[18px] font-bold">
               <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
@@ -101,7 +101,7 @@ const Header = () => {
         <ul className="flex space-x-3 md:space-x-4 items-center relative right-7">
           <li>
             <Link to="/cart">
-              <BsCart4 className="text-3xl" />
+              <BsCart4 className="md:text-3xl mr-4 text-[25px]"  />
             </Link>
           </li>
           {userInfo ? (
@@ -109,13 +109,13 @@ const Header = () => {
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
                 onMouseOver={() => setdropdownOpen(!dropdownOpen)}
-                className=" py-2 pr-2   text-lg font-bold text-gray-600 hover:text-gray-700  rounded-l-md"
+                className=" py-2 pr-2  text-[17px] md:text-lg font-bold text-gray-600 hover:text-gray-700  rounded-l-md"
               >
                 Dropdown
               </Link>
 
               <div
-                className="relative  "
+                className="relative"
                 onClick={() => setdropdownOpen(false)}
                 onMouseLeave={() => setdropdownOpen(false)}
               >
@@ -138,14 +138,14 @@ const Header = () => {
                   <div className="p-2">
                     <Link
                       onClick={logoutHandler}
-                      className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-200 hover:text-gray-900"
+                      className="block px-4 py-2 text-[18px] md:text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-200 hover:text-gray-900"
                     >
                       Logout
                     </Link>
 
                     <Link
                       to="/profile"
-                      className="block px-4 py-2 text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-200 hover:text-gray-900"
+                      className="block px-4 py-2 text-[18px]  md:text-lg font-medium text-gray-500 rounded-lg hover:bg-gray-200 hover:text-gray-900"
                     >
                       Profile
                     </Link>
@@ -156,7 +156,7 @@ const Header = () => {
           ) : (
             <li>
               <Link to="/login">
-                <CgProfile className="text-3xl" />
+                <CgProfile className="md:text-3xl text-[25px]" />
               </Link>{" "}
             </li>
           )}

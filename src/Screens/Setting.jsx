@@ -74,7 +74,7 @@ const Setting = ({ history }) => {
           </div>
         </div>
         <div className="md:w-[50%] px-[1rem] md:px-[2rem] my-20 ">
-          <h4 className="md:text-left text-center font-bold md:text-3xl text-xl">
+          <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
             Update Information
           </h4>
           {loading && <Loader />}
@@ -87,7 +87,7 @@ const Setting = ({ history }) => {
               placeholder="Enter name"
               onChange={(e) => setName(e.target.value)}
               value={name}
-              className="border  p-3 text-sm md:text-lg outline-none"
+              className="border  p-3 text-[18px] md:text-lg outline-none"
             />
 
             <input
@@ -95,7 +95,7 @@ const Setting = ({ history }) => {
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border  p-3 text-sm md:text-lg outline-none"
+              className="border  p-3 text-[18px] md:text-lg outline-none"
             />
 
             <input
@@ -103,7 +103,7 @@ const Setting = ({ history }) => {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="border  p-3  text-sm md:text-lg outline-none"
+              className="border  p-3  text-[18px] md:text-lg outline-none"
             />
 
             <input
@@ -111,12 +111,12 @@ const Setting = ({ history }) => {
               placeholder="Confirm password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="border  p-3 text-sm md:text-lg outline-none"
+              className="border  p-3 text-[18px] md:text-lg outline-none"
             />
 
             <button
               type="submit"
-              className="hover:bg-blue-800 bg-slate-800 text-white px-14 text-center py-3 rounded-md text-sm md:text-lg "
+              className="hover:bg-blue-800 bg-slate-800 text-white px-14 text-center py-3 rounded-md text-[18px] md:text-lg "
             >
               Update
             </button>

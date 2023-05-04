@@ -13,7 +13,7 @@ const Contact = () => {
       <Navbar />
 
       <div className="aboutBanner mt-10 justify-center items-center flex">
-        <h1 className="md:text-7xl font-sans text-4xl font-bold text-white">
+        <h1 className="md:text-6xl font-sans text-2xl font-bold text-white">
           Contact
         </h1>
       </div>
@@ -21,24 +21,24 @@ const Contact = () => {
       <div className="  my-10 border-2 md:flex-row flex-col space-y-20 container mx-auto flex justify-between">
         
         <div className="md:w-1/2  space-y-7 p-5 md:p-16 flex flex-col  md:border-r-2">
-          <h4 className="text-3xl text-center ">Send Us A Message</h4>
+          <h4 className="md:text-3xl text-[18px] text-center ">Send Us A Message</h4>
 
           <input
             type="text"
-            className="border p-5 text-lg outline-none"
+            className="border md:p-5 p-3 md:text-lg text-[16px] outline-none"
             placeholder="Your Email Address"
           />
 
           <textarea
             name=""
-            className="border p-5 text-lg outline-none"
+            className="border md:p-5 p-3 text-[16px]  md:text-lg outline-none"
             id=""
             cols="30"
             rows="5"
             placeholder="How Can We Help?"
           ></textarea>
 
-          <Link className="bg-slate-900 text-white py-3  text-center rounded-full hover:bg-blue-500 ">
+          <Link className="bg-slate-900 text-white md:text-lg text-[17px] md:py-3 py-2 text-center rounded-full hover:bg-blue-500 ">
             SUBMITE
           </Link>
         </div>
@@ -47,11 +47,11 @@ const Contact = () => {
 
           <div className="">
             <div className=" flex items-center">
-              <FaMapMarkerAlt className="text-lg text-gray-500"/>
-              <h4 className="text-xl px-5 text-gray-700 font-medium">Address</h4>
+              <FaMapMarkerAlt className="md:text-lg text-[18px] text-gray-500"/>
+              <h4 className="md:text-xl text-[18px] px-5 text-gray-700 font-medium">Address</h4>
             </div>
 
-            <p className="max-w-xs py-4 text-lg px-9 text-gray-400">
+            <p className="max-w-xs py-4 md:text-lg text-[16px] px-9 text-gray-400">
               Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
             </p>
           </div>
@@ -59,19 +59,19 @@ const Contact = () => {
           <div className="">
             <div className="text-2xl flex items-center">
               <AiOutlinePhone className=" text-gray-500"/>
-              <h4 className="text-xl text-gray-700 font-medium px-5">Let's Talk</h4>
+              <h4 className="md:text-xl text-[18px]  text-gray-700 font-medium px-5">Let's Talk</h4>
             </div>
 
-            <p className="text-lg px-8 text-blue-600 py-4">+1 800 123456789</p>
+            <p className="md:text-lg text-[16px] px-8 text-blue-600 py-4">+1 800 123456789</p>
           </div>
 
           <div className="">
             <div className="text-2xl flex items-center">
               <AiOutlineMail className=" text-gray-500"/>
-              <h4 className="text-xl px-5 text-gray-700 font-medium">Scale Support</h4>
+              <h4 className="md:text-xl text-[18px] px-5 text-gray-700 font-medium">Scale Support</h4>
             </div>
 
-            <p className="py-4 text-lg text-blue-600 px-9">contact@example.com</p>
+            <p className="py-4 md:text-lg text-[16px] text-blue-600 px-9">contact@example.com</p>
           </div>
         </div>
       </div>

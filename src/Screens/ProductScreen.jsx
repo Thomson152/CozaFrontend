@@ -32,13 +32,13 @@ const ProductScreen = ({ match, history }) => {
       <Navbar />
       <Link
         to="/shop"
-        className="text-xl relative  top-20 md:left-24 left-12 py-3  text-black rounded-full"
+        className="md:text-xl text-[18px]  relative  top-20 md:left-24 left-12 py-3  text-black rounded-full"
       >
         Go Back
       </Link>
 
       {loading ? (
-        <Loader />
+        <Loader className = "mt-20" />
       ) : error ? (
         error
       ) : (
@@ -48,22 +48,22 @@ const ProductScreen = ({ match, history }) => {
           </div>
 
           <div className="md:w-1/2 md:py-16  py-8 ">
-            <h1 className=" md:text-5xl text-2xl font-bold">{product.name}</h1>
-            <h4 className="text-2xl py-3 font-semibold">${product.price}</h4>
+            <h1 className=" md:text-5xl text-xl font-bold">{product.name}</h1>
+            <h4 className="md:text-2xl text-[18px] py-3 font-semibold">${product.price}</h4>
 
             <Ratings
               value={product.rating}
               text={`${product.numReviews} reviews`}
             />
             <div className="flex pt-3 items-center">
-              <h1 className="text-lg  font-bold">Status:</h1>
-              <p className=" px-3 font-semibold text-lg">
+              <h1 className="md:text-lg text-[18px]  font-bold">Status:</h1>
+              <p className=" px-3 font-semibold text-[18px] md:text-lg">
                 {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
               </p>
             </div>
 
             <div className="flex pt-3 flex-col">
-              <h1 className="text-xl font-bold">Description:</h1>
+              <h1 className="md:text-xl text-[18px] font-bold">Description:</h1>
               <p className="md:text-lg text-sm py-2">{product.description}</p>
             </div>
 
@@ -72,7 +72,7 @@ const ProductScreen = ({ match, history }) => {
                 as="select"
                 value={qty}
                 className="outline-0 
-                border md:w-18 p-4 bg-gray-100 w-20 "
+                border md:w-18 p-4 bg-gray-100 w-18 "
                 onChange={(e) => setQty(e.target.value)}
               >
                 {[...Array(product.countInStock).keys()].map((x) => (
@@ -86,7 +86,7 @@ const ProductScreen = ({ match, history }) => {
               disabled = { product.countInStock === 0}
                 onClick={addToCartHandler}
                 type="button"
-                className="bg-black py-2 mx-2 text-center hover:bg-blue-500 hover:text-white m px-6 text-lg rounded text-white"
+                className="bg-black py-2 mx-2 text-center hover:bg-blue-500 hover:text-white m px-6 md:text-lg text-[16px] rounded text-white"
               >
                 {" "}
                 Add to Cart

@@ -32,12 +32,12 @@ const RegisterScreen = ({history, location}) => {
       }
     }, [history, userInfo, redirect]);
   
-  
+    if (error) {
+      toast.error("All Input Field Required")
+    }
     const submitHandler = (e) => {
       e.preventDefault()
-      if (error) {
-        toast.error("All Input Field Required")
-      }
+    
     if (password !== ConfirmPassword) {
       toast.info("Passwords do not match")
     } else {
@@ -64,7 +64,7 @@ const RegisterScreen = ({history, location}) => {
 
             <input
               type="text"
-              className="border  p-3 text-lg outline-none"
+              className="border text-[18px]  p-3 md:text-lg outline-none"
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -72,14 +72,14 @@ const RegisterScreen = ({history, location}) => {
 
             <input
               type="text"
-              className="border  p-3 text-lg outline-none"
+              className="border  p-3  text-[18px] md:text-lg outline-none"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type={PasswordInputType}
-              className="border  p-3  text-lg outline-none"
+              className="border  p-3 text-[18px] md:text-lg outline-none"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -90,7 +90,7 @@ const RegisterScreen = ({history, location}) => {
 
             <input
               type={PasswordInputType}
-              className="border  p-3  text-lg outline-none"
+              className="border  p-3 text-[18px] md:text-lg outline-none"
               placeholder="Confirm Password"
               value={ConfirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -100,7 +100,7 @@ const RegisterScreen = ({history, location}) => {
             </span>
             <button
               type="submit"
-              className="hover:bg-blue-600 text-white px-14 text-center py-3 rounded-md text-lg bg-black "
+              className="hover:bg-blue-600 text-white px-14 text-center md:py-3 py-2 rounded-md md:text-lg text-[16px] bg-black "
             >
               <Link>REGISTER</Link>
             </button>

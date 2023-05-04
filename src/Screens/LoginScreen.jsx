@@ -57,17 +57,17 @@ const LoginScreen = ({ history, location }) => {
               <img src={logo} alt="" />
             </div>
 
-            <h1 className="md:text-2xl text-xl pt-2 font-bold">LOG IN</h1>
+            <h1 className="md:text-2xl text-[18px] pt-2 font-bold">LOG IN</h1>
             <input
               type="text"
-              className="border  p-3 text-lg outline-none"
+              className="border  p-3 md:text-lg text-[17px]  outline-none"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type={PasswordInputType}
-              className="border  p-3  text-lg outline-none"
+              className="border  p-3  md:text-lg  text-[17px] outline-none"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -77,7 +77,7 @@ const LoginScreen = ({ history, location }) => {
             </span>
             <button
               type="submit"
-              className="hover:bg-blue-800 text-white px-14 text-center py-3 rounded-md text-xl bg-black "
+              className="hover:bg-blue-800 text-white px-14 text-center md:py-3 py-2 rounded-md md:text-xl text-[17px]  bg-black "
             >
               <Link>Log In</Link>
             </button>

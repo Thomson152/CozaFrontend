@@ -64,12 +64,12 @@ const HomeScreen = () => {
                   Woman Collection 2023
                 </h2>
 
-                <h1 className="md:text-7xl text-5xl py-7 font-serif font-medium">
+                <h1 className="md:text-7xl text-4xl py-7 font-serif font-medium">
                   NEW SEASON
                 </h1>
                 <Link
                   to="/shop"
-                  className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
+                  className="text-white bg-blue-500 py-2 md:py-3 px-9 rounded-full hover:bg-black"
                 >
                   SHOP NOW
                 </Link>
@@ -108,7 +108,7 @@ const HomeScreen = () => {
                 </h1>
                 <Link
                   to="/shop"
-                  className="text-white bg-blue-500 py-3 px-9 rounded-full hover:bg-black"
+                  className="text-white bg-blue-500 md:py-3 py-2 px-9 rounded-full hover:bg-black"
                 >
                   SHOP NOW
                 </Link>
@@ -122,8 +122,8 @@ const HomeScreen = () => {
         <div className="mt-20 flex overflow-hidden  md:space-x-10  flex-col md:flex-row  mb-5 container  md:mx-auto">
           <div className="border md:w-1/3 relative overflow-hidden group w-full my-3 border-gray-200 banner1 shadow  rounded">
             <div className="absolute left-5 ">
-              <h1 className="text-3xl font-bold">Women</h1>
-              <h2 className="text-lg py-2">Spring 2023</h2>
+              <h1 className="md:text-3xl mt-4 text-2xl font-bold">Women</h1>
+              <h2 className="md:text-lg text-[16px] py-2">Spring 2023</h2>
             </div>
 
             <div
@@ -131,16 +131,16 @@ const HomeScreen = () => {
              opacity-0 group-hover:opacity-100 transition-all duration-500 "
             >
               <div className="relative left-5 ">
-                <h1 className="text-3xl font-bold">Women</h1>
-                <h2 className="text-lg py-2">Spring 2023</h2>
+                <h1 className="md:text-3xl mt-4 text-2xl font-bold">Women</h1>
+                <h2 className="md:text-lg text-[16px] py-2">Spring 2023</h2>
               </div>
             </div>
           </div>
 
           <div className="border md:w-1/3 relative overflow-hidden group w-full my-3 border-gray-200 banner2 shadow  rounded">
             <div className="absolute left-5 ">
-              <h1 className="text-3xl font-bold">Men</h1>
-              <h2 className="text-lg py-2">Spring 2023</h2>
+              <h1 className="md:text-3xl mt-4 text-2xl font-bold">Men</h1>
+              <h2 className="md:text-lg text-[16px] py-2">Spring 2023</h2>
             </div>
 
             <div
@@ -148,16 +148,16 @@ const HomeScreen = () => {
              opacity-0 group-hover:opacity-100 transition-all duration-500 "
             >
               <div className="relative left-5 ">
-                <h1 className="text-3xl font-bold">Men</h1>
-                <h2 className="text-lg py-2">Spring 2023</h2>
+                <h1 className="md:text-3xl mt-4 text-2xl font-bold">Men</h1>
+                <h2 className="md:text-lg text-[16px] py-2">Spring 2023</h2>
               </div>
             </div>
           </div>
 
           <div className="border md:w-1/3 relative overflow-hidden group w-full my-3 border-gray-200 banner3 shadow  rounded">
             <div className="absolute left-5 ">
-              <h1 className="text-3xl font-bold">Accessories</h1>
-              <h2 className="text-lg py-2">Spring 2023</h2>
+              <h1 className="md:text-3xl mt-4 text-2xl font-bold">Accessories</h1>
+              <h2 className="md:text-lg text-[16px] py-2">Spring 2023</h2>
             </div>
 
             <div
@@ -165,8 +165,8 @@ const HomeScreen = () => {
              opacity-0 group-hover:opacity-100 transition-all duration-500 "
             >
               <div className="relative left-5 ">
-                <h1 className="text-3xl font-bold">Accessories</h1>
-                <h2 className="text-lg py-2">Spring 2023</h2>
+                <h1 className="md:text-3xl mt-4 text-2xl font-bold">Accessories</h1>
+                <h2 className="md:text-lg text-[16px] py-2">Spring 2023</h2>
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ const HomeScreen = () => {
         {/* //Product */}
 
         <div className="container md:mx-auto mt-10">
-          <h1 className="md:text-4xl text-3xl text-center md:text-left font-sans font-bold  py-10">
+          <h1 className="md:text-4xl text-2xl text-center md:text-left font-sans font-bold  py-10">
             TRENDING NOW
           </h1>
           {loading ? (

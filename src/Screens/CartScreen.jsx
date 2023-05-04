@@ -40,7 +40,7 @@ const CartScreen = ({ match, location, history }) => {
         <>
           <div className="mt-[7rem] mb-24 md:space-x-5 flex flex-col px-6 md:px-0 md:flex-row container  md:mx-auto">
             <div className="md:w-[70%] w-[100%]">
-              <h1 className="md:text-2xl text-xl font-bold mb-7">
+              <h1 className="md:text-2xl text-[18px] font-bold mb-7">
                 SHOPPING CART
               </h1>
               <div className="">
@@ -48,20 +48,20 @@ const CartScreen = ({ match, location, history }) => {
                   <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                       <tr>
-                        <th scope="col" class="px-6  text-lg font-bold py-3">
+                        <th scope="col" class="px-6 text-[16px]  md:text-lg font-bold py-3">
                           Product
                         </th>
                         <th
                           scope="col"
-                          class="md:px-[6rem] px-[8rem] text-lg font-bold  py-3"
+                          class="md:px-[6rem] px-[8rem] text-[16px] md:text-lg font-bold  py-3"
                         >
                           Price
                         </th>
-                        <th scope="col" class="px-6 text-lg font-bold  py-3">
+                        <th scope="col" class="px-6 text-[16px] md:text-lg font-bold  py-3">
                           quantity
                         </th>
 
-                        <th scope="col" class="px-6 text-lg font-bold  py-3">
+                        <th scope="col" class="px-6 text-[16px] md:text-lg font-bold  py-3">
                           Remove
                         </th>
                       </tr>
@@ -78,9 +78,9 @@ const CartScreen = ({ match, location, history }) => {
                               className="md:w-[40%]  w-[50%]"
                               alt=""
                             />
-                            <h4 className="text-lg ml-2"> {item.name}</h4>
+                            <h4 className="md:text-lg text-[16px] ml-2"> {item.name}</h4>
                           </th>
-                          <td class="md:px-20 px-[8rem] md:py-4 text-lg">
+                          <td class="md:px-20 text-[16px] px-[8rem] md:py-4 md:text-lg">
                             {item.price}
                           </td>
                           <td class="px-6 py-[5rem]">
@@ -108,7 +108,7 @@ const CartScreen = ({ match, location, history }) => {
                                 )
                               }
                               className="outline-0 
-                            border md:w-18 p-4 bg-gray-100 w-20 "
+                            border md:w-18 `md:p-4 p-2 bg-gray-100 w-20 "
                             >
                               {[...Array(item.countInStock).keys()].map((x) => (
                                 <option key={x + 1} value={x + 1}>
@@ -136,8 +136,8 @@ const CartScreen = ({ match, location, history }) => {
             </div>
 
             <div className="md:w-[30%] pb-8 flex flex-col w-[100%] h-[100%]  border px-5   mt-[4rem]">
-              <h1 className="text-xl py-4 text-left font-bold">CART TOTALS</h1>
-              <h3 className="text-lg  mb-7 border-b font-medium">
+              <h1 className="md:text-xl text-[18px] py-4 text-left font-bold">CART TOTALS</h1>
+              <h3 className=" md:text-lg text-[16px] mb-7 border-b font-medium">
                 Subtotal:({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 items : $
                 {cartItems
@@ -145,7 +145,7 @@ const CartScreen = ({ match, location, history }) => {
                   .toFixed(2)}
               </h3>
 
-              <Link className="bg-black rounded px-10 font-bold  md:mx-0 text-center items-center text-white py-4 ">
+              <Link className="bg-black text-[16px] rounded md:px-10 px-8 font-bold  md:mx-0 text-center items-center py-2 text-white md:py-4 ">
                 PROCEED TO CHECKOUT
               </Link>
             </div>
