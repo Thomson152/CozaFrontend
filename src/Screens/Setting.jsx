@@ -74,7 +74,7 @@ const Setting = ({ history }) => {
           </div>
         </div>
         <div className="md:w-[50%] px-[1rem] md:px-[2rem] my-20 ">
-          <h4 className="md:text-left text-center font-bold md:text-3xl text-2xl">
+          <h4 className="md:text-left text-center font-bold md:text-3xl text-[18px]">
             Update Information
           </h4>
           {loading && <Loader />}

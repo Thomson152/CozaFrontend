@@ -145,7 +145,7 @@ const CartScreen = ({ match, location, history }) => {
                   .toFixed(2)}
               </h3>
 
-              <Link className="bg-black text-[16px] rounded md:px-10 px-8 font-bold  md:mx-0 text-center items-center py-2 text-white md:py-4 ">
+              <Link className="bg-black text-[16px] rounded md:px-10 px-8 font-bold  md:mx-0 text-center items-center py-3 text-white md:py-4 ">
                 PROCEED TO CHECKOUT
               </Link>
             </div>
