@@ -87,7 +87,7 @@ const Setting = ({ history }) => {
               placeholder="Enter name"
               onChange={(e) => setName(e.target.value)}
               value={name}
-              className="border  p-3 text-[18px] md:text-lg outline-none"
+              className="border  p-3 text-[16px] md:text-lg outline-none"
             />
 
             <input
@@ -95,7 +95,7 @@ const Setting = ({ history }) => {
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border  p-3 text-[18px] md:text-lg outline-none"
+              className="border  p-3 text-[16px] md:text-lg outline-none"
             />
 
             <input
@@ -103,7 +103,7 @@ const Setting = ({ history }) => {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="border  p-3  text-[18px] md:text-lg outline-none"
+              className="border  p-3  text-[16px] md:text-lg outline-none"
             />
 
             <input
@@ -111,7 +111,7 @@ const Setting = ({ history }) => {
               placeholder="Confirm password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="border  p-3 text-[18px] md:text-lg outline-none"
+              className="border  p-3 text-[16px] md:text-lg outline-none"
             />
 
             <button
