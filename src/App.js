@@ -33,6 +33,7 @@ function App() {
             <Route path="/" component={HomeScreen} exact />
             <Route path="/shop" component={ShopScreen}/>
             <Route path="/about" component={About}/>
+            <Route path='/shipping' component={ShippingScreen} />
             <Route path="/contact" component={Contact}/>
             <Route path="/user" component={UserProfile}/>
             <Route path="/profile" component={ProfileScreen}/>

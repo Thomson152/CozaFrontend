@@ -8,8 +8,9 @@ import logo from "../images/logo-01.png";
 import usePasswordToggle from "../hooks/usePasswordToggle";
 import { login } from "../actions/userAction";
 import Loader from "../components/Loader";
-import {  toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Footer from "../components/Footer";
 const LoginScreen = ({ history, location }) => {
   const [PasswordInputType, ToggleIcon] = usePasswordToggle();
 
@@ -24,28 +25,23 @@ const LoginScreen = ({ history, location }) => {
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
   useEffect(() => {
-
-  
     if (userInfo) {
       history.push(redirect);
     }
   }, [history, userInfo, redirect]);
 
-
   const submitHandler = (e) => {
-  
     e.preventDefault();
     dispatch(login(email, password));
     if (error) {
-      toast.error(error)
+      toast.error(error);
     }
   };
- 
 
   return (
     <div>
-    <Navbar/>
-   
+      <Navbar />
+
       {loading && <Loader />}
       <div className="flex justify-center relative conatiner items-center mt-32 mb-16">
         <div className="bg-white md:w-[40%] w-[90%] h-[100%]  space-y-5 flex-col border-3 shadow flex py-[2rem] px-3 md:px-[3rem] ">
@@ -61,6 +57,7 @@ const LoginScreen = ({ history, location }) => {
             <input
               type="text"
               className="border  p-3 md:text-lg text-[17px]  outline-none"
+              required
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -68,6 +65,7 @@ const LoginScreen = ({ history, location }) => {
             <input
               type={PasswordInputType}
               className="border  p-3  md:text-lg  text-[17px] outline-none"
+              required
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -75,17 +73,21 @@ const LoginScreen = ({ history, location }) => {
             <span className="absolute top-[14rem] md:top-[14.2rem]  right-[3rem] md:right-[31rem]">
               {ToggleIcon}
             </span>
+            <div className="">
             <button
               type="submit"
-              className="hover:bg-blue-800 text-white px-14 text-center md:py-3 py-2 rounded-md md:text-xl text-[17px]  bg-black "
+              className="hover:bg-blue-800 px-7 text-white text-center md:py-3 py-2 rounded-md md:text-[16px] text-[14px]  bg-black "
             >
-              <Link>Log In</Link>
+              Log in
             </button>
+            </div>
+          
 
             <div className="text-center  text-sm md:text-lg ">
               New Customer?{" "}
               <Link
-                to={redirect ? `/register?redirect=${redirect}` : "/register"} className = "text-blue-800 text-sm md:text-lg"
+                to={redirect ? `/register?redirect=${redirect}` : "/register"}
+                className="text-blue-800 text-sm md:text-lg"
               >
                 Register
               </Link>
@@ -93,6 +95,7 @@ const LoginScreen = ({ history, location }) => {
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

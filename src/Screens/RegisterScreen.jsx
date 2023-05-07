@@ -9,6 +9,7 @@ import { login, register } from "../actions/userAction";
 import Loader from "../components/Loader";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "../components/Footer";
 const RegisterScreen = ({history, location}) => {
 
     const [PasswordInputType, ToggleIcon] = usePasswordToggle();
@@ -61,18 +62,23 @@ const RegisterScreen = ({history, location}) => {
             </div>
 
             <h1 className="md:text-2xl text-xl pt-2 font-bold">REGISTER</h1>
-
+           
+              
             <input
               type="text"
               className="border text-[18px]  p-3 md:text-lg outline-none"
               placeholder="Name"
               value={name}
+              required
               onChange={(e) => setName(e.target.value)}
             />
+            
+         
 
             <input
               type="text"
               className="border  p-3  text-[18px] md:text-lg outline-none"
+              required
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -80,6 +86,7 @@ const RegisterScreen = ({history, location}) => {
             <input
               type={PasswordInputType}
               className="border  p-3 text-[18px] md:text-lg outline-none"
+              required
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -91,6 +98,7 @@ const RegisterScreen = ({history, location}) => {
             <input
               type={PasswordInputType}
               className="border  p-3 text-[18px] md:text-lg outline-none"
+              required
               placeholder="Confirm Password"
               value={ConfirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -98,12 +106,16 @@ const RegisterScreen = ({history, location}) => {
             <span className="absolute top-[24rem] md:top-[25rem]  right-[3rem] md:right-[32rem]">
               {ToggleIcon}
             </span>
+
+            <div className="">
             <button
               type="submit"
-              className="hover:bg-blue-600 text-white px-14 text-center md:py-3 py-2 rounded-md md:text-lg text-[16px] bg-black "
+              className="hover:bg-blue-600 text-white px-7 text-center md:py-3 py-2 rounded-md md:text-[16px] text-[16px] bg-black"
             >
-              <Link>REGISTER</Link>
+              REGISTER
             </button>
+            </div>
+          
 
             <div className="text-center text-sm md:text-lg ">
               Already Have an account?{" "}
@@ -116,6 +128,7 @@ const RegisterScreen = ({history, location}) => {
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

@@ -28,6 +28,11 @@ const CartScreen = ({ match, location, history }) => {
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   };
+
+  const checkoutHandler = () => {
+    history.push("/login?redirect=shipping");
+  };
+
   return (
     <div className="">
       <Navbar />
@@ -48,7 +53,10 @@ const CartScreen = ({ match, location, history }) => {
                   <table class="w-full text-sm text-left text-gray-500 ">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                       <tr>
-                        <th scope="col" class="px-6 text-[16px]  md:text-lg font-bold py-3">
+                        <th
+                          scope="col"
+                          class="px-6 text-[16px]  md:text-lg font-bold py-3"
+                        >
                           Product
                         </th>
                         <th
@@ -57,11 +65,17 @@ const CartScreen = ({ match, location, history }) => {
                         >
                           Price
                         </th>
-                        <th scope="col" class="px-6 text-[16px] md:text-lg font-bold  py-3">
+                        <th
+                          scope="col"
+                          class="px-6 text-[16px] md:text-lg font-bold  py-3"
+                        >
                           quantity
                         </th>
 
-                        <th scope="col" class="px-6 text-[16px] md:text-lg font-bold  py-3">
+                        <th
+                          scope="col"
+                          class="px-6 text-[16px] md:text-lg font-bold  py-3"
+                        >
                           Remove
                         </th>
                       </tr>
@@ -78,7 +92,10 @@ const CartScreen = ({ match, location, history }) => {
                               className="md:w-[40%]  w-[50%]"
                               alt=""
                             />
-                            <h4 className="md:text-lg text-[16px] ml-2"> {item.name}</h4>
+                            <h4 className="md:text-lg text-[16px] ml-2">
+                              {" "}
+                              {item.name}
+                            </h4>
                           </th>
                           <td class="md:px-20 text-[16px] px-[8rem] md:py-4 md:text-lg">
                             {item.price}
@@ -136,7 +153,9 @@ const CartScreen = ({ match, location, history }) => {
             </div>
 
             <div className="md:w-[30%] pb-8 flex flex-col w-[100%] h-[100%]  border px-5   mt-[4rem]">
-              <h1 className="md:text-xl text-[18px] py-4 text-left font-bold">CART TOTALS</h1>
+              <h1 className="md:text-xl text-[18px] py-4 text-left font-bold">
+                CART TOTALS
+              </h1>
               <h3 className=" md:text-lg text-[16px] mb-7 border-b font-medium">
                 Subtotal:({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 items : $
@@ -145,14 +164,18 @@ const CartScreen = ({ match, location, history }) => {
                   .toFixed(2)}
               </h3>
 
-              <Link className="bg-black text-[16px] rounded md:px-10 px-8 font-bold  md:mx-0 text-center items-center py-3 text-white md:py-4 ">
+              <button
+                onClick={checkoutHandler}
+                disabled={cartItems.length === 0}
+                className="bg-black text-[16px] rounded md:px-10 px-8 font-bold  md:mx-0 text-center items-center py-3 text-white md:py-4 "
+              >
                 PROCEED TO CHECKOUT
-              </Link>
+              </button>
             </div>
           </div>
         </>
       )}
-       <Footer/>
+      <Footer />
     </div>
   );
 };
