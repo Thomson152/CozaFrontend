@@ -13,12 +13,12 @@ const ShippingScreen = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="justify-center flex flex-col border-2 w-[90%] lg:w-[50%] items-center mx-[auto] mb-10 mt-32 container shadow py-[7rem] lg:mx-auto ">
-        <div className="mb-2">
+      <div className=" flex  flex-col border-2 w-[90%] lg:w-[50%] items-start lg:items-center mx-[auto] mb-10 my-[15rem] container shadow py-[5rem]  ">
+        <div className="mb-10 pl-7">
           <h1 className="lg:text-3xl  text-2xl">Shipping</h1>
         </div>
 
-        <form className="flex-col px-10 w-[100%] lg:w-[50%] lg:mt-10  space-y-6">
+        <form className="flex-col px-10  w-[100%] lg:w-[80%] lg:mt-10  space-y-6">
           <div className=" flex flex-col ">
             <label className="mb-2">Address</label>
             <input
