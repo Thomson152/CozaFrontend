@@ -167,7 +167,7 @@ const CartScreen = ({ match, location, history }) => {
               <button
                 onClick={checkoutHandler}
                 disabled={cartItems.length === 0}
-                className="bg-black text-[16px] rounded md:px-10 px-8 font-bold  md:mx-0 text-center items-center py-3 text-white md:py-4 "
+                className="bg-black text-[16px] rounded md:px-2 px-8 font-bold  md:mx-0 text-center items-center py-3 text-white md:py-3 "
               >
                 PROCEED TO CHECKOUT
               </button>

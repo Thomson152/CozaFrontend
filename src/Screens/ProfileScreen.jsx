@@ -64,7 +64,7 @@ const ProfileScreen = () => {
         </div>
       </div>
 
-      <div className="md:w-[70%]  w-[100%]">
+      <div className="lg:w-[70%]   w-[100%]">
         <div className="flex justify-center flex-col space-y-3 items-center  h-screen">
           <div className="mb-[2rem]">
             
