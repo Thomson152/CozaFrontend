@@ -9,15 +9,19 @@ import Loader from "../components/Loader";
 import { listProducts } from "../actions/productActions";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
-const ShopScreen = () => {
+import Paginate from "../components/Paginate";
+const ShopScreen = ({match}) => {
+
+  const pageNumber = match.params.pageNumber || 1
+
   const dispatch = useDispatch();
 
-  const productList = useSelector((state) => state.productList);
-  const { loading, products, error } = productList;
-
+    const productList = useSelector((state) => state.productList)
+  const { loading, error, products, page, pages } = productList
+ 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts('', pageNumber));
+  }, [dispatch, pageNumber]);
 
   return (
     <>
@@ -40,6 +44,7 @@ const ShopScreen = () => {
           )}
          
       </div>
+      <Paginate  page ={page}  pages ={pages}/>
       <Footer/>
     </>
   );
