@@ -108,7 +108,7 @@ const Header = () => {
             <div className="inline-flex  rounded-md">
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                onMouseOver={() => setdropdownOpen(!dropdownOpen)}
+                // onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2  text-[17px] md:text-lg font-bold text-gray-600 hover:text-gray-700  rounded-l-md"
               >
                 Dropdown

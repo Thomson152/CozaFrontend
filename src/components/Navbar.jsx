@@ -107,16 +107,16 @@ const Navbar = () => {
             <div className="inline-flex pr-2   rounded-md">
               <Link
                 onClick={() => setdropdownOpen(!dropdownOpen)}
-                onMouseOver={() => setdropdownOpen(!dropdownOpen)}
+                // onMouseOver={() => setdropdownOpen(!dropdownOpen)}
                 className=" py-2 pr-2 text-[17px] md:text-lg font-bold text-black   rounded-l-md"
               >
                 Dropdown
-              </Link>
+              </Link> 
 
-              <div
+              <divw3 
                 className="relative"
                 onClick={() => setdropdownOpen(false)}
-                onMouseLeave={() => setdropdownOpen(false)}
+                // onMouseLeave={() => setdropdownOpen(false)}
               >
                 <button
                   type="button"
@@ -149,7 +149,7 @@ const Navbar = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </divw3>
             </div>
           ) : (
             <li>

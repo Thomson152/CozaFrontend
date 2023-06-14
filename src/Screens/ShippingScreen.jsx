@@ -27,9 +27,9 @@ const ShippingScreen = ({history}) => {
     <div className="">
       <Navbar />
       <CheckoutSteps step1 step2/>
-      <div className=" flex  flex-col border-2 w-[90%] lg:w-[50%] items-start lg:items-center mx-[auto] mb-10 container shadow py-[5rem]  ">
-        <div className="mb-10 lg:mb-3 pl-7">
-          <h1 className="lg:text-4xl  text-2xl">Shipping</h1>
+      <div className=" flex  flex-col border-2 w-[90%] lg:w-[50%] items-center lg:items-center mx-[auto] mb-10 container shadow py-[5rem]  ">
+        <div className="mb-14 lg:mb-3 pl-7">
+          <h1 className="lg:text-4xl text-center text-3xl">Shipping</h1>
         </div>
 
         <form  onSubmit={submitHandler} className="flex-col px-3  w-[100%] lg:w-[80%] lg:mt-10  space-y-6">
