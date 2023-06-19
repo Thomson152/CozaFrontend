@@ -50,8 +50,8 @@ const CartScreen = ({ match, location, history }) => {
               </h1>
               <div className="">
                 <div class="relative overflow-x-auto">
-                  <table class="w-full text-sm text-left text-gray-500 ">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+                  <table class="w-full text-sm text-left ">
+                    <thead class="text-xs uppercase  ">
                       <tr>
                         <th
                           scope="col"
@@ -82,7 +82,7 @@ const CartScreen = ({ match, location, history }) => {
                     </thead>
                     <tbody>
                       {cartItems.map((item) => (
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr class="bg-white border-b ">
                           <th
                             scope="row"
                             class=" py-14 px-5 flex items-center font-medium text-gray-900 whitespace-nowrap dark:text-white"

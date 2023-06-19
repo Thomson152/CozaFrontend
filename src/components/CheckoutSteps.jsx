@@ -9,7 +9,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <ul className="md:px-4 px-2">
         {step1 ? (
           <li>
-            <Link to="/login" className=" md:text-[18px] text-[16px]">
+            <Link to="/login" className=" md:text-[18px] text-[16px] ">
               Sign In
             </Link>
           </li>
@@ -27,7 +27,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <ul className="md:px-4 px-2">
         {step2 ? (
           <li>
-            <Link to="/shipping" className=" md:text-[18px] text-[16px]">
+            <Link to="/shipping" className=" md:text-[18px] text-[16px] ">
               Shipping
             </Link>
           </li>
@@ -45,7 +45,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <ul className="md:px-4 px-2">
         {step3 ? (
           <li>
-            <Link to="/payment" className=" md:text-[18px] text-[16px]">
+            <Link to="/payment" className=" md:text-[18px] text-[16px] b">
               Payment
             </Link>
           </li>
@@ -63,7 +63,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <ul className="md:px-4 px-2">
         {step4 ? (
           <li>
-            <Link to="/placeorder" className="text-[18px]">
+            <Link to="/placeorder" className="md:text-[18px] text">
               Place Order
             </Link>
           </li>

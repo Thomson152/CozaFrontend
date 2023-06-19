@@ -57,8 +57,9 @@ const PaymentScreen = ({ history }) => {
                   onChange={handleMethodChange}
                 >
                   
-                  {/* <option value="creditCard">Credit Card</option> */}
+                 
                   <option value="paypal">PayPal</option>
+                   {/* <option value="strip">Strip</option> */}
                   
                 </select>
               </div>

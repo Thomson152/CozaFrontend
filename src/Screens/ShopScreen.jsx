@@ -37,7 +37,6 @@ const ShopScreen = ({match}) => {
               {products.map((product) => (
                 <div key={product._id}>
                   <Product product={product} />
-
                 </div>
               ))}
             </div>
